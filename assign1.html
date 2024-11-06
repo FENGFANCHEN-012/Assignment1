@@ -14,44 +14,79 @@
 
 <section class="container" >
     <section class="item1">HAISEN PHARM </section>
-    <section class="item2">why we have a good life?<img src=""> </section>   
+    <section class="item2">Flourishing our life together<img src=""> </section>   
     <section class="container1">Navigate</section>
 </section>
 
 <ul class="middle2">
 
-    <li class="slogan">Life - Not a fool world </li>
+    <li class="slogan">Embrace a healthy and natural lifes</li>
     <li class="convert">></li>
 </ul>
 <section class="container">
 <p class="middle">
-publizing phrase  
+
 <div class="button" style="margin-left:25%">___</div>
 <div class="button" >___</div>
 <div class="button" >___</div>
+
 </p>
 </section>
 </header>
 <hr>
 <main>
     <h1>About Company</h1>
-    <section class="background">
-        <ul class="container">
-            
-           
-            <li class="section1"><img height="350px" width="300px"src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360"></li>
-            
-            <li class="button" style="margin-left:40%">*</li>
-            <li class = "button">*</li>
-            <li class="button">*</li>
-            
-            
-        </ul>
-        <section class="main" style="margin-top: 100px; ">Our story not only a life</li>
-        
+     <section style="display:flex;justify-content:center">
+        <button class="button" onclick="Slide(0)" >1</button>
+        <button class="button" onclick="Slide(1)" >2</button>
+        <button class="button" onclick="Slide(2)" >3</button>
     </section>
+    <section class="background">
+       
+    <ul id="container2" >
+        <li class="containers">
+            <div  class="img" style=" margin-bottom: 0px;"><img src="https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg"></div>
+            <div class="main">first</div>
+        </li>
+        <li class="containers">
+            <div  class="img" ><img src="https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg"></div>
+            <div class="main">second</div>
+        </li>
+        <li class="containers">
+            <div class="img"><img src="https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg"></div>
+            <div class="main" >third</div>
+        </li>
+            
+        </ul>    
+    </section>
+    <script>
+      
+        const trace = document.querySelector('#container2');
+        const slide = Array.from(trace.children);
+        const slideWid = slide[0].getBoundingClientRect().width;
+        var current=0;
+
+        function Slide(index) {
+            const SlideWidth = slideWid + 348; 
+            if (current === 0) {
+               
+                current = index;
+                trace.style.transform = `translateX(-${SlideWidth * current}px)`;
+            } else if (current > index) {
+               
+                trace.style.transform = `translateX(-${SlideWidth * index}px)`;
+                current = index; 
+            } else if (current < index) {
+                
+                trace.style.transform = `translateX(-${SlideWidth * index}px)`;
+                current = index; 
+            }
+        }
+        
+
+    </script>
 </main>
-</header>
+
 
 
 <!DOCTYPE html>
@@ -66,31 +101,32 @@ publizing phrase
 
         <ul id="container">
             <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div style="text-align:center;position:relative">jj</div>
+            </li>
+            
+            <li class="longsection">
+                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
                 <div style="text-align:center;position:relative">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
-                <div style="text-align:center;position:relative">jj</div>
-            </li>
-            <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
                 <div style="text-align:center;position:relative" >jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
                 <div style="text-align:center">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
                 <div style="text-align:center">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
                 <div style="text-align:center">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
                 <div style="text-align:center">jj</div>
             </li>
           
@@ -113,7 +149,7 @@ publizing phrase
         function moveSlide(direction) {
             currentIndex += direction;
 
-            if (currentIndex >= slides.length) {
+            if (currentIndex > 5) {
                 currentIndex = 0;
             }
             if (currentIndex < 0) {
