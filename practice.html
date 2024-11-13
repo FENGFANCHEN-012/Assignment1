@@ -3,160 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Company Service Carousel</title>
-<link href="homepage.css" rel="stylesheet" type="text/css">
+<title>Hover to Reveal Panels</title>
 <style>
-    /* 设置页面的整体样式 */
-    body {
-        font-family: Arial, sans-serif;
-    }
-
-    .header {
-        padding: 20px;
-        background-color: #f5f5f5;
-        text-align: center;
-    }
-
+    /* 设置页面的中心容器 */
     .container {
-        display: flex;
-        justify-content: start;
-        align-items: center;
-        gap: 20px;
-
-    }
-
-    .carousel-container {
         position: relative;
+        width: 200px;
+        height: 200px;
+        margin: 100px auto;
+        text-align: center;
+    }
+
+    /* 中心图片的样式 */
+    .center-image {
         width: 100%;
-        max-width: 1200px;
-        margin: 0 auto;
-        overflow: hidden;
-        gap:30px;
-    }
-
-    .container ul {
-        list-style-type: none;
-        padding: 0;
-    }
-
-    .container ul li {
-        text-align: center;
-    }
-
-    /* Carousel 轮播样式 */
-    .carousel-container .container {
-        display: flex;
-        transition: transform 0.5s ease;
-    }
-
-    .longsection {
-        min-width: 55%;
-        
-        box-sizing: border-box;
-        text-align: center;
-    }
-
-    .button2 {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        font-size: 2em;
-        color: black;
-        background-color: rgba(255, 255, 255, 0.5);
+        height: 100%;
+        background-color: #3498db;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
         cursor: pointer;
-        padding: 5px 10px;
-        border-radius: 5px;
     }
 
-    .button2.left {
-        left: 10px;
+    /* 隐藏的板块的通用样式 */
+    .panel {
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        background-color: #e74c3c;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        opacity: 0; /* 初始状态下隐藏 */
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .button2.right {
-        right: 10px;
+    /* 6个板块的位置布局 */
+    .panel1 { top: -90px; left: 50%; transform: translateX(-50%); }
+    .panel2 { top: 50%; left: 130%; transform: translateY(-50%); }
+    .panel3 { top: 130%; left: 50%; transform: translate(-50%, -50%); }
+    .panel4 { top: 50%; left: -90px; transform: translateY(-50%); }
+    .panel5 { top: -50px; left: -50px; }
+    .panel6 { top: -50px; right: -50px; }
+
+    /* 鼠标悬停时中心图片轻微缩小 */
+    .center-image:hover {
+        transform: scale(0.9);
+    }
+
+    /* 增加 .show-panels 类时，让板块显现 */
+    .show-panels .panel {
+        opacity: 1;
+        transform: scale(1);
     }
 </style>
 </head>
 <body>
-<header class="header">
-    <section class="container">
-        <section class="item1">HAISEN PHARM</section>
-        <section class="item2">Why we have a good life?</section>   
-        <section class="container1">Navigate</section>
-    </section>
 
-    <ul class="middle2">
-        <li class="slogan">Life - Not a Fool's World</li>
-        <li class="convert">></li>
-    </ul>
-
-    <section class="container">
-        <p class="middle">
-            Publishing phrase  
-            <div class="button" style="margin-left:25%">___</div>
-            <div class="button">___</div>
-            <div class="button">___</div>
-        </p>
-    </section>
-</header>
-
-<hr>
-
-<main>
-    <h1>Company Service</h1>
-    <div class="carousel-container">
-        <ul class="container">
-            <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg" alt="Tree Nature">
-                <div>jj</div>
-            </li>
-            <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg" alt="Tree Nature">
-                <div>jj</div>
-                <li class="longsection">
-                    <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg" alt="Tree Nature">
-                    <div>jj</div>
-            <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg" alt="Tree Nature">
-                <div>jj</div>
-            </li>
-            <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg" alt="Tree Nature">
-                <div>jj</div>
-            </li>
-            <li class="longsection">
-                <img height="200px" width="300px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg" alt="Tree Nature">
-                <div>jj</div>
-            </li>
-        </ul>
-        <div class="button2 left" onclick="moveSlide(-1)">‹</div>
-        <div class="button2 right" onclick="moveSlide(1)">›</div>
-    </div>
-</main>
+<div class="container" id="container">
+    <div class="center-image" id="centerImage">Center</div>
+    <div class="panel panel1">Panel 1</div>
+    <div class="panel panel2">Panel 2</div>
+    <div class="panel panel3">Panel 3</div>
+    <div class="panel panel4">Panel 4</div>
+    <div class="panel panel5">Panel 5</div>
+    <div class="panel panel6">Panel 6</div>
+</div>
 
 <script>
-    // JavaScript 轮播功能
-    const track = document.querySelector('.carousel-container .container');
-    const slides = Array.from(track.children);
-    const slideWidth = slides[0].getBoundingClientRect().width;
-    let currentIndex = 0;
+    // 获取中心图片和容器
+    const centerImage = document.getElementById("centerImage");
+    const container = document.getElementById("container");
 
-    function moveToSlide(index) {
-        track.style.transform = `translateX(-${slideWidth * index}px)`;
-    }
-
-    function moveSlide(direction) {
-        currentIndex += direction;
-
-        // 循环滚动效果
-        if (currentIndex >= slides.length) {
-            currentIndex = 0;
-        }
-        if (currentIndex < 0) {
-            currentIndex = slides.length - 1;
-        }
-        moveToSlide(currentIndex);
-    }
+    // 当鼠标悬停在中心图片上时，增加容器的 .show-panels 类
+    centerImage.addEventListener("mouseenter", () => {
+        container.classList.add("show-panels");
+    });
 </script>
+
 </body>
 </html>
