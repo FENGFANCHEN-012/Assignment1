@@ -1,87 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hover to Reveal Panels</title>
-<style>
-    /* 设置页面的中心容器 */
-    .container {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        margin: 100px auto;
-        text-align: center;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Half Screen Popup</title>
+    <style>
+        /* 页面基础样式 */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f2f2f2;
+        }
+        
+        /* 按钮样式 */
+        .open-popup-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
-    /* 中心图片的样式 */
-    .center-image {
-        width: 100%;
-        height: 100%;
-        background-color: #3498db;
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-        cursor: pointer;
-    }
+        .open-popup-btn:hover {
+            background-color: #0056b3;
+        }
 
-    /* 隐藏的板块的通用样式 */
-    .panel {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        background-color: #e74c3c;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 10px;
-        opacity: 0; /* 初始状态下隐藏 */
-        transition: opacity 0.5s ease, transform 0.5s ease;
-    }
+        /* 弹出层样式 */
+        .popup {
+            position: fixed;
+            top: 0;
+            right: -50%;
+            width: 50%;
+            height: 100%;
+            background-color: #fff;
+            box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+            transition: right 0.3s ease;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+        }
 
-    /* 6个板块的位置布局 */
-    .panel1 { top: -90px; left: 50%; transform: translateX(-50%); }
-    .panel2 { top: 50%; left: 130%; transform: translateY(-50%); }
-    .panel3 { top: 130%; left: 50%; transform: translate(-50%, -50%); }
-    .panel4 { top: 50%; left: -90px; transform: translateY(-50%); }
-    .panel5 { top: -50px; left: -50px; }
-    .panel6 { top: -50px; right: -50px; }
+        /* 弹出层显示时的样式 */
+        .popup.show {
+            right: 0;
+        }
 
-    /* 鼠标悬停时中心图片轻微缩小 */
-    .center-image:hover {
-        transform: scale(0.9);
-    }
+        /* 弹出层内部内容 */
+        .popup-header {
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    /* 增加 .show-panels 类时，让板块显现 */
-    .show-panels .panel {
-        opacity: 1;
-        transform: scale(1);
-    }
-</style>
+        .popup-content {
+            padding: 20px;
+            flex-grow: 1;
+            overflow-y: auto;
+        }
+
+        /* 关闭按钮样式 */
+        .close-btn {
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
-<div class="container" id="container">
-    <div class="center-image" id="centerImage">Center</div>
-    <div class="panel panel1">Panel 1</div>
-    <div class="panel panel2">Panel 2</div>
-    <div class="panel panel3">Panel 3</div>
-    <div class="panel panel4">Panel 4</div>
-    <div class="panel panel5">Panel 5</div>
-    <div class="panel panel6">Panel 6</div>
-</div>
+    <!-- 打开弹出层的按钮 -->
+    <button class="open-popup-btn" onclick="openPopup()">Open Popup</button>
 
-<script>
-    // 获取中心图片和容器
-    const centerImage = document.getElementById("centerImage");
-    const container = document.getElementById("container");
+    <!-- 半屏弹出层 -->
+    <div class="popup" id="popup">
+        <div class="popup-header">
+            <h2>Popup Title</h2>
+            <button class="close-btn" onclick="closePopup()">✖</button>
+        </div>
+        <div class="popup-content">
+            <p>This is the content of the popup. You can put any HTML content here.</p>
+            <p>Additional content can be added to make the popup scrollable if needed.</p>
+        </div>
+    </div>
 
-    // 当鼠标悬停在中心图片上时，增加容器的 .show-panels 类
-    centerImage.addEventListener("mouseenter", () => {
-        container.classList.add("show-panels");
-    });
-    sdsd
-</script>
+    <script>
+        // 打开弹出层函数
+        function openPopup() {
+            document.getElementById('popup').classList.add('show');
+        }
+
+        // 关闭弹出层函数
+        function closePopup() {
+            document.getElementById('popup').classList.remove('show');
+        }
+    </script>
 
 </body>
 </html>

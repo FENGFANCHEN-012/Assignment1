@@ -2,16 +2,24 @@
 body{
     background-color: darkkhaki;
 }
+.footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    height:30vw;
+    
+}
 .background{
 
-    
+    margin-top: 1vw;
     background-color: whitesmoke;
     border:lightgray;
-  
+   margin-left: 2.5%;
     text-align: center;
-    height:500px;
+    height:36vw;
+    width:95%;
     z-index: 1;
-    justify-content: center;
+   
     overflow: hidden;
     
 }
@@ -20,17 +28,32 @@ body{
     background-position: center;
     background-size: cover;
     display: flex;
-    justify-items: center;
   
+    width: 30vw;
+    height:30vw;
+    background-image: url("https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg");
+    z-index: 1
+    ;position: relative;
+
     
    
+}
+.img2{
+    background-position: center;
+    background-size: cover;
+    display: flex;
+   
+    width: 37vw;
+    height:22vw;
+    background-image: url("https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg");
+  
 }
 .main{
     
     
-    margin-left: 200px;
-    width:500px; 
-    
+    margin-left: 20vw;
+    width:5vw; 
+    justify-content: center;
     display: flex;
 }
 .containers{
@@ -38,7 +61,7 @@ body{
     display: flex;
     justify-items: center;
     
-   height:400px;
+   height:35vw;
 
 }
 #container2{
@@ -46,15 +69,14 @@ body{
     
   width:100%;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    
 
  justify-content: start;
  align-items: center;
- justify-content: start;
-   gap:348px;
-   height:50vw;
-   max-width:50vw;
+ 
+   gap:40vw;
+   height: 100%;
+   width:100%;
    transition: transform 1.0s ease;
 }
 #containers {
@@ -63,7 +85,7 @@ body{
    display: flex;
     box-sizing: border-box;
     margin-bottom: 20px; 
-    height:30vw;
+    height:80%;
     }
 
 #container {
@@ -73,6 +95,13 @@ body{
     gap: 20px;
  justify-content:start;
     transition: transform 0.5s ease;}
+    #container3 {
+        display: flex;
+     z-index: 1;
+        list-style-type: none;
+        gap: 20px;
+     justify-content:start;
+        transition: transform 0.5s ease;}
 .container {
     display: flex;
      justify-content: start;
@@ -80,6 +109,16 @@ body{
     gap: 4px;
     margin-left: 0;
    
+    transition: transform 0.5s ease;
+
+}
+.container3 {
+    display: flex;
+     justify-content: start;
+    list-style-type: none;
+    gap: 40vw;
+    margin-left: 0;
+    margin-top:3vw;
     transition: transform 0.5s ease;
 
 }
@@ -91,9 +130,9 @@ body{
 
 .longcontainer{
     position: relative;
-    width: 85%;
+    width: 95%;
     max-width: 1400px;
-    margin: 0 auto;
+   margin-left: 2%;
     overflow: hidden;
     gap:30px;
     justify-content: center;
@@ -113,7 +152,7 @@ hr{
    
 .header{
    width: 100%;
-    height: 510px; 
+    height:45vw; 
     background-image: url("https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360"); 
     background-size: cover; 
     background-position: center; 
@@ -122,7 +161,7 @@ hr{
 .container1{
     
     position: relative;
-    left:500px;
+    left:30vw;
 
 }   
 .item1 {     
@@ -131,7 +170,7 @@ hr{
     
    
     color: white;
-    font-size: 40px;
+    font-size: 4vw;
     
 }
 .convert{
@@ -147,20 +186,20 @@ hr{
     display: flex;
     padding-left: 3px;
     justify-content: start;
-    margin-left: 40px;
+    margin-left: 1vw;
    
-    height: 10pxs;
-    width: 400px;
+  max-height:10vh;
+    min-width: 40vw;
     line-height: normal;
     align-items: center;
-    font-size: xx-large;
+   font-size: 3vw;
 }
 
 
 .item2 {
     
     position: relative ;
-    
+    font-size:1vw;
     
     color: white;
     
@@ -184,7 +223,7 @@ hr{
 .middle2{
     display: flex;
     justify-content: start;
-    margin-top: 300px;
+    margin-top: 25vw;
     
     
     
@@ -211,18 +250,51 @@ hr{
 .button2.right {
     right: 20px;}
 .longsection{
-    margin-top: 10px; z-index: 1;   margin-bottom: 50px;}
+    margin-top: 10px; z-index: 1;   height:20vw;}
 
 .button{
-    margin-top:20px;
+    margin-top:5vw;
     display: flex;
     ;justify-content: center;
-    font-size: large;
-    margin-left: 40px;
+    height:2.5vw;
+    width:2.5vw;
+    font-size: 2vw;
+    margin-left: 4vw;
     z-index: 2;
 }
+.button_{
+    margin-top:0.1vw;
+    display: flex;
+    ;justify-content: center;
+    border:0px;
+    font-size: 2vw;
+    margin-left: 3vw;
+    z-index: 2;
+}
+.bigimage{
+    background-image: url("https://miro.medium.com/v2/resize:fit:1400/format:webp/1*uNCVd_VqFOcdxhsL71cT5Q.jpeg");
+    background-size:cover;
+    background-position: center;
+    width:30vw;
+    height:90%;
+    margin-top:3%;
+    margin-left:1vw;
 
-    
+
+
+}
+.smallimg{
+    background-image: url("https://miro.medium.com/v2/resize:fit:1400/format:webp/1*uNCVd_VqFOcdxhsL71cT5Q.jpeg");
+    background-size:cover;
+    background-position: center;
+    width:10vw;
+    height:43%;
+    margin-top:3%;
+    margin-left:1vw;
+}
+
+
+
 
 
 .break{

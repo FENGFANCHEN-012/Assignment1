@@ -15,7 +15,10 @@
 <section class="container" >
     <section class="item1">HAISEN PHARM </section>
     <section class="item2">Flourishing our life together<img src=""> </section>   
-    <section class="container1">Navigate</section>
+    <section class="container1"><button onclick="open()"></button>Navigate</section>
+
+
+
 </section>
 
 <ul class="middle2">
@@ -35,26 +38,28 @@
 </header>
 <hr>
 <main>
-    <h1>About Company</h1>
+    <h1 style="margin-top:10vw">About Company</h1>
      <section style="display:flex;justify-content:center">
-        <button class="button" onclick="Slide(0)" >1</button>
-        <button class="button" onclick="Slide(1)" >2</button>
+        <button class="button" onclick="Slide(0)">1</button>
+        <button class="button" onclick="Slide(1)">2</button>
         <button class="button" onclick="Slide(2)" >3</button>
     </section>
     <section class="background">
        
     <ul id="container2" >
         <li class="containers">
-            <div  class="img" style=" margin-bottom: 0px;"><img style="size:40vw;"src="https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg"></div>
+            <div  class="img" ></div>
             <div class="main">first</div>
         </li>
+
         <li class="containers">
-            <div  class="img" ><img src="https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg"></div>
+            <div  class="img" ></div>
             <div class="main">second</div>
         </li>
+
         <li class="containers">
-            <div class="img"><img src="https://t4.ftcdn.net/jpg/03/90/91/49/240_F_390914943_oBX7iQsgEFmhtUJkrLDybkScca2zTXL8.jpg"></div>
-            <div class="main" >third</div>
+            <div class="img"></div>
+            <div class="main">third</div>
         </li>
             
         </ul>    
@@ -65,20 +70,27 @@
         const slide = Array.from(trace.children);
         const slideWid = slide[0].getBoundingClientRect().width;
         var current=0;
-
+        
+       
+         const widthPercentage = (elementWidth / windowWidth) * 100;
         function Slide(index) {
-            const SlideWidth = slideWid + 348; 
+            const element = document.querySelector('#container2');
+        const elementWidth = element.offsetWidth; 
+        const windowWidth = window.innerWidth; 
+        const widthPercentage = (((elementWidth) / windowWidth) * 100);
+
+            
             if (current === 0) {
                
                 current = index;
-                trace.style.transform = `translateX(-${SlideWidth * current}px)`;
+                trace.style.transform = `translateX(-${(widthPercentage) * current}vw)`;
             } else if (current > index) {
                
-                trace.style.transform = `translateX(-${SlideWidth * index}px)`;
+                trace.style.transform = `translateX(-${(widthPercentage) * index}vw)`;
                 current = index; 
             } else if (current < index) {
                 
-                trace.style.transform = `translateX(-${SlideWidth * index}px)`;
+                trace.style.transform = `translateX(-${(widthPercentage) * index}vw)`;
                 current = index; 
             }
         }
@@ -89,44 +101,40 @@
 
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Company Service</title>
 <main>
-    <h1>Company Service</h1>
+    <h1  style="margin-top:20vw">Company Service</h1>
     <div class="longcontainer">
 
         <ul id="container">
             <li class="longsection">
-                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div class="img2"></div>
                 <div style="text-align:center;position:relative">jj</div>
             </li>
             
             <li class="longsection">
-                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div class="img2"></div>
                 <div style="text-align:center;position:relative">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div class="img2"></div>
                 <div style="text-align:center;position:relative" >jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div class="img2"></div>
                 <div style="text-align:center">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div class="img2"></div>
                 <div style="text-align:center">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div class="img2"></div>
                 <div style="text-align:center">jj</div>
             </li>
             <li class="longsection">
-                <img height="200px" width="320px" src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360" alt="Tree Nature">
+                <div class="img2"></div>
                 <div style="text-align:center">jj</div>
             </li>
           
@@ -143,7 +151,7 @@
         let currentIndex = 0;
 
         function moveToSlide(index) {
-            track.style.transform = `translateX(-${slideWidth * index}px)`;
+            track.style.transform = `translateX(-${(slideWidth * index)}px)`;
         }
 
         function moveSlide(direction) {
@@ -159,46 +167,85 @@
         }
     </script>
 </main>
-<h1>Market Strategy</h1>   <!--first-->
-<section style="width:100%;background-color:grey;height:500px;border-radius:15px">
-    <ul class="container">
+
+<h1 style="margin-top:25vw;">Market Strategy</h1>   <!--first-->
+   <section style="height:56vw;background-color:rgb(51, 105, 105);width:95%;margin-left:2.5%;display:flex;justify-content:start;gap:3vw;">
+     
         
        
-        <li class="section1"><img height="350px" width="300px"src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360"></li>
+       <div class="bigimage"></div>
+        <div class="bigimage"></div>
+        <div class="bigimage"></div>
         
-        <li class="button" style="margin-left:40%">*</li>
-        <li class = "button">*</li>
-        <li class="button">*</li>
-        
-        
-    </ul>
-    <section class="main" style="margin-top: 100px; ">Our story not only a life</li>
-    
 </section>
+    
 
-<main style="margin-top:400px">
-    <h1>Social Responsibility</h1>   <!--first-->
+
+    <h1 style="margin-top:20vw">Social Responsibility</h1>   <!--first-->
     <section class="background">
-        <ul class="container">
+        <section style="display:flex;justify-content:center;position:relative">
+            <button class="button_" onclick="SSlide(0)" >__</button>
+            <button class="button_" onclick="SSlide(1)" >__</button>
+            <button class="button_" onclick="SSlide(2)" >__</button>
+            <button class="button_" onclick="SSlide(3)" >__</button>
+        </section>
+        <ul class="container3" >
+            
+          
+            <li class="containers">
+                <div  class="img" ></div>
+                <div class="main">first</div>
+            </li>
+            <li class="containers">
+                <div  class="img" ></div>
+                <div class="main">second</div>
+            </li>
+            <li class="containers">
+                <div  class="img" ></div>
+                <div class="main">third</div>
+            </li>
+            <li class="containers">
+                <div  class="img" ></div>
+                <div class="main">forth</div>
+            </li>
             
            
-            <li class="section1"><img height="350px" width="300px"src="https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360"></li>
-            
-            <li class="button" style="margin-left:40%">*</li>
-            <li class = "button">*</li>
-            <li class="button">*</li>
             
             
         </ul>
-        <section class="main" style="margin-top: 100px; ">Our story not only a life</li>
+       
         
     </section>
+    <script>
+        const track3 = document.querySelector('.container3');
+        const slides3 = Array.from(track3.children);
+        
+        let indexs = 0;
+
+        function SSlide(current) {
+          
+            const slideWidth3 = slides3[0].getBoundingClientRect().width;
+    
+          
+            indexs = current;
+        
+           
+            track3.style.transform = `translateX(-${((slideWidth3+ 500)* indexs)}px)`;
+        
+        }
+
+       
+    </script>
     
 
-</main>
 
 
-<h1> hi</h1>
+<hr style="margin-top:20vw">
+
+<p class="footer">sdasdasdas
+
+
+</p>
 
 
 </body>
