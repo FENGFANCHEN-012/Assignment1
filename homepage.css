@@ -129,6 +129,17 @@ body{
     transition: transform 0.5s ease;
 
 }
+.container0 {
+    height:100%;
+    gap:16vw;
+    display: flex;
+    list-style-type: none;
+    overflow:hidden;
+    margin-left: 0;
+   
+    transition: transform 0.5s ease;
+
+}
 .container3 {
     display: flex;
      justify-content: start;
@@ -188,7 +199,7 @@ hr{
     background-position: center; 
     background-repeat: no-repeat; ;}
 .search{
-    
+
 }
 .container1{
     

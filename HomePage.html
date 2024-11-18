@@ -12,30 +12,68 @@
 <body>
 <header class="header">
 
-<section class="container" >
+<section class="container0">
+
+<section style=>
+    <section class="container">
+    <section class="item1">HAISEN PHARM 1</section>
+    <section class="item2">Flourishing our life together<img src=""> </section>   
+    <section class="container1"><button onclick="open()"></button>Navigate</section>
+</section>
+    <div class="middle2">
+
+        <div class="slogan">Embrace a healthy and natural lifes</div>
+        <div class="convert"><button onclick="next(1)">></button></div>
+    </div>
+</section>
+
+<section  >
+    <section class="container">
     <section class="item1">HAISEN PHARM </section>
     <section class="item2">Flourishing our life together<img src=""> </section>   
     <section class="container1"><button onclick="open()"></button>Navigate</section>
+</section>
+    <div class="middle2">
 
-
-
+        <div class="slogan">Embrace a healthy and natural lifes</div>
+        <div class="convert"><button onclick="next(1)">></button></div>
+    </div>
 </section>
 
-<ul class="middle2">
+<section  >
+    <section class="container">
+    <section class="item1">HAISEN PHARM 3 </section>
+    <section class="item2">Flourishing our life together<img src=""> </section>   
+    <section class="container1"><button onclick="open()"></button>Navigate</section>
+</section>
+    <div class="middle2">
 
-    <li class="slogan">Embrace a healthy and natural lifes</li>
-    <li class="convert">></li>
-</ul>
-<section class="container">
-<p class="middle">
+        <div class="slogan">Embrace a healthy and natural lifes</div>
+        <div class="convert"><button onclick="next(1)">></button></div>
+    </div>
+</section>
 
-<div class="button" style="margin-left:25%">___</div>
-<div class="button" >___</div>
-<div class="button" >___</div>
-
-</p>
 </section>
 </header>
+
+<script>
+    const first = document.querySelector(".container0")
+    const width = first[0].getBoundingClientRect().width;
+    const head = Array.from(first.children);
+    let now = 0;
+    function next(next){
+        now+=next
+        if(current>3){
+            now=0
+            first.style.transform = `translateX(-${(head) * 3 }px)`;
+        }
+        else{
+        first.style.transform = `translateX(-${(head) }px)`;
+        }
+    }
+</script>
+
+
 <hr>
 <main>
     <h1 style="margin-top:10vw">About Company</h1>
