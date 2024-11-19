@@ -1,7 +1,13 @@
 
 body{
-    background-color: darkkhaki;
+    background-color: rgb(224, 222, 206);
 }
+a {
+    all: unset; 
+    display: inline; 
+    cursor: pointer; 
+}
+
 .Logo{
     font-size:4vw;
 
@@ -125,18 +131,19 @@ body{
     list-style-type: none;
     gap: 4px;
     margin-left: 0;
-   
+   width:97vw;
     transition: transform 0.5s ease;
 
 }
 .container0 {
     height:100%;
-    gap:16vw;
+    width:100%;
+    gap:0.5vw;
     display: flex;
     list-style-type: none;
-    overflow:hidden;
+    ;
     margin-left: 0;
-   
+ 
     transition: transform 0.5s ease;
 
 }
@@ -153,7 +160,7 @@ body{
 .smallcontainer{
     display:flex;
     justify-items: start;
-    
+    width:100%;
 }
 .Ccontainer{
    
@@ -186,18 +193,26 @@ h1{
 
 }
 hr{
-    margin-top:20px;
+    width:100%;
+    
     background-color: lightgray;
     border: 0capn;
 }
-   
+
+ 
+
+
+
+
+
 .header{
    width: 100%;
     height:50vw; 
-    background-image: url("https://img.freepik.com/free-photo/photorealistic-view-tree-nature-with-branches-trunk_23-2151478039.jpg?t=st=1730429601~exp=1730433201~hmac=49e65574db0be59bea500e59af7176bb98b46206a239d458c63ebc51aeb0ed2a&w=360"); 
+   background-image: url("picture\\5.jpg");
     background-size: cover; 
     background-position: center; 
-    background-repeat: no-repeat; ;}
+    background-repeat: no-repeat; 
+    overflow: hidden;}
 .search{
 
 }
@@ -205,19 +220,20 @@ hr{
     
     position: relative;
     left:25vw;
+    z-index: 4;
 
 }   
 .item1 {     
     padding: 10px;
     position: relative;
     
-   
+   z-index: 1;
     color: white;
-    font-size: 4vw;
+    font-size: 2.5vw;
     
 }
 .convert{
-    margin-left: 500px;
+    margin-left: 40vw;
     display: flex;
     justify-content: end;
     width: 20px;
@@ -230,8 +246,8 @@ hr{
     padding-left: 3px;
     justify-content: start;
     margin-left: 1vw;
-   
-  max-height:10vh;
+  
+  max-height:10vw;
     min-width: 40vw;
     line-height: normal;
     align-items: center;
@@ -241,13 +257,20 @@ hr{
 
 .item2 {
     
-    position: relative ;
-    font-size:1vw;
-    
+   
+    font-size:1.7vw;
+    margin-top:1vw;
+    margin-left:2vw;
     color: white;
-    
+  
 }
-
+.item2:hover{
+ transform: scale(1.05);
+ background-color: 
+}
+.item2:active{
+    transform: scale(0.95);
+}
 .middle{
 
     margin-top: 0px;
@@ -264,12 +287,10 @@ hr{
 
 }
 .middle2{
+    
     display: flex;
     justify-content: start;
-    margin-top: 25vw;
-    
-    
-    
+    margin-top:25vw;
     width: 100%;
     height:50px;
 
@@ -335,8 +356,21 @@ hr{
     margin-top:3%;
     margin-left:1vw;
 }
-
-
+.custom-button {
+   
+    
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+}
+.custom-button:hover {
+    
+    transform: scale(1.05); 
+}
+.custom-button:active {
+    background-color: #3e8e41; 
+    transform: scale(0.95); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
 
 h1{

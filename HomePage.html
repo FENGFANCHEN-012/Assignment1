@@ -10,67 +10,112 @@
 </style>
 </head>
 <body>
-<header class="header">
+<header class="header" >
 
 <section class="container0">
 
-<section style=>
+<section style="background-image:url(picture\\1.jpg);background-size:cover">
     <section class="container">
-    <section class="item1">HAISEN PHARM 1</section>
-    <section class="item2">Flourishing our life together<img src=""> </section>   
-    <section class="container1"><button onclick="open()"></button>Navigate</section>
-</section>
-    <div class="middle2">
-
+    <section class="item1">HAISEN</section>
+    <section class="item2" style="margin-left:7vw">About Company</section>
+    <section class="item2">Inovation</section>
+    <section class="item2">Company Service</section>
+    <section class="item2">Market Strategy</section>
+    <section class="item2">Our Responsibility</section>
+    </section>
+    <hr>
+    <section class="middle2" >
+        
         <div class="slogan">Embrace a healthy and natural lifes</div>
         <div class="convert"><button onclick="next(1)">></button></div>
-    </div>
-</section>
+    </section>
+    <section class="custom-button"style="margin-left:14vw;margin-top:1vw;background-color:aquamarine;font-size:2vw;width:11.4vw;height:2.5vw;padding:0.3vw">
+        Explore More
+    </section>
 
-<section  >
+</section >
+
+<section style="background-image:url(picture\\4.jpg);background-size:cover">
     <section class="container">
-    <section class="item1">HAISEN PHARM </section>
-    <section class="item2">Flourishing our life together<img src=""> </section>   
-    <section class="container1"><button onclick="open()"></button>Navigate</section>
-</section>
-    <div class="middle2">
-
+    <section class="item1">HAISEN</section>
+    <section class="item2" style="margin-left:7vw">About Company</section>
+    <section class="item2"><a href="https://www.hastenpharma.com/talent">Innovation</a></section>
+    <section class="item2"><a href=CompanyService.html>Company Service</a></section>
+    <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+    <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+    </section>
+    <hr>
+    <section class="middle2" >
+        
         <div class="slogan">Embrace a healthy and natural lifes</div>
         <div class="convert"><button onclick="next(1)">></button></div>
-    </div>
+    </section>
+    <section class="custom-button"style="margin-left:14vw;margin-top:1vw;background-color:aquamarine;font-size:2vw;width:11.4vw;height:2.5vw;padding:0.3vw">
+        Explore More
+    </section>
+
 </section>
 
-<section  >
+<section style="background-image:url(picture\\6.jpg);background-size:cover">
     <section class="container">
-    <section class="item1">HAISEN PHARM 3 </section>
-    <section class="item2">Flourishing our life together<img src=""> </section>   
-    <section class="container1"><button onclick="open()"></button>Navigate</section>
-</section>
-    <div class="middle2">
-
+    <section class="item1">HAISEN</section>
+    <section class="item2" style="margin-left:7vw">About Company</section>
+    <section class="item2">Inovation</section>
+    <section class="item2">Company Service</section>
+    <section class="item2">Market Strategy</section>
+    <section class="item2">Our Responsibility</section>
+    </section>
+    <hr>
+    <section class="middle2" >
+        
         <div class="slogan">Embrace a healthy and natural lifes</div>
         <div class="convert"><button onclick="next(1)">></button></div>
-    </div>
+    </section>
+    <section class="custom-button"style="margin-left:14vw;margin-top:1vw;background-color:aquamarine;font-size:2vw;width:11.4vw;height:2.5vw;padding:0.3vw">
+        Explore More
+    </section>
+
 </section>
 
 </section>
 </header>
 
 <script>
-    const first = document.querySelector(".container0")
-    const width = first[0].getBoundingClientRect().width;
-    const head = Array.from(first.children);
-    let now = 0;
-    function next(next){
-        now+=next
-        if(current>3){
-            now=0
-            first.style.transform = `translateX(-${(head) * 3 }px)`;
-        }
-        else{
-        first.style.transform = `translateX(-${(head) }px)`;
-        }
+   
+const first = document.querySelector(".container0");
+
+
+function appear(){
+    if (nav.style.display === "none" || nav.style.display === "") {
+        nav.style.display = "block";
+        show.textContent = "Back";
+    } else {
+        nav.style.display = "none";
+        show.textContent = "Menu"; 
     }
+}
+
+
+const pages = Array.from(first.children);
+let now = 0; 
+
+const time = 0;
+for(const i =0;i<1000000;i++){
+    setTimeout(next,30000,1)
+}
+
+function next(step) {
+  now += step; 
+
+
+  if (now >= pages.length) {
+    now = 0; 
+  } else if (now < 0) {
+    now = pages.length - 1; 
+  }
+first.style.transform = `translateX(-${now * 100}%)`
+  
+}
 </script>
 
 
