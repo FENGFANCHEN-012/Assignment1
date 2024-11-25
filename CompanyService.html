@@ -27,34 +27,242 @@
 
 
 
+
+
+
+<section class="background2" style="height:50vw">
+    <section style="width:100%;background-image:url(picture\\2.jpg);margin:2vw"><h1>Medicine</h1><p>We Care About you </p></section>
+    
+   
+  <section class="product-card" onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
+  <section class="product-card"  onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
+    <section class="product-card" onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
+    <section class="product-card" onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
+   </section>
+</section>
+
+<section class="background2" style="height:50vw;margin-top:15vw;overflow:hidden">
+    <section class="container0">
+
+       
+        <section class="item-intro">
+            <div class="item-image">
+                <img src="https://via.placeholder.com/400" alt="Item Image">
+            </div>
+            <div class="item-details">
+                <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
+                <h2 class="item-title">Amazing Item</h2>
+                <p class="item-description">
+                    Discover the features of this amazing item! It is designed to make your life easier, more convenient, and more enjoyable.
+                </p>
+                <button class="item-button">Learn More</button>
+            </div>
+        </section>
+
+
+
+        <section class="item-intro">
+            <div class="item-image">
+                <img src="https://via.placeholder.com/400" alt="Item Image">
+            </div>
+
+            <div class="item-details">
+                <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
+                <h2 class="item-title">Amazing Item</h2>
+                <p class="item-description">
+                    Discover the features of this amazing item! It is designed to make your life easier, more convenient, and more enjoyable.
+                </p>
+                <button class="item-button">Learn More</button>
+            </div>
+        </section>
+
+        <section class="item-intro">
+            <div class="item-image">
+                <img src="https://via.placeholder.com/400" alt="Item Image">
+            </div>
+            <div class="item-details">
+                <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
+                <h2 class="item-title">Amazing Item</h2>
+                <p class="item-description">
+                    Discover the features of this amazing item! It is designed to make your life easier, more convenient, and more enjoyable.
+                </p>
+                <button class="item-button">Learn More</button>
+            </div>
+        </section>
+        </section>
+</section>
+       
+        
+      
+        
+        <script>
+           
+        const first = document.querySelector(".container0");
+        
+        
+        function appear(){
+            if (nav.style.display === "none" || nav.style.display === "") {
+                nav.style.display = "block";
+                show.textContent = "Back";
+            } else {
+                nav.style.display = "none";
+                show.textContent = "Menu"; 
+            }
+        }
+        
+        
+        const pages = Array.from(first.children);
+        let now = 0; 
+        
+        const time = 0;
+        for(const i =0;i<1000000;i++){
+            setTimeout(next,30000,1)
+        }
+        
+        function next(step) {
+          now += step; 
+        
+        
+          if (now >= pages.length) {
+            now = 0; 
+          } else if (now < 0) {
+            now = pages.length - 1; 
+          }
+        first.style.transform = `translateX(-${now * 33.5}%)`
+          
+        }
+        </script>
+        
+</section>
 <script>
-    const randomNumber = Math.random();
-    var w = document.getElementById("price")
-    w.innerHTML=randomNumber
+    const productTitles = ["Penicillin", "Ceftriaxone", "Vitamins", "Fish Oil", "Bhruove","Penicillin", "erythromycin", "org vege oil", "ammon chlor drug"];
+    const productImages = ["picture\\m1.png", "picture\\m2.png", "picture\\m3.png", "picture\\m4.png", "picture\\m5.png","picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png","picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png"];
+    const set1=[["picture\\pexels-anna-nekrashevich-8533223-removebg-preview.png","picture\\pexels-binoid-cbd-1990665-3612182-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png","picture\\pexels-eva-bronzini-6914588-removebg-preview.png","picture\\pexels-fotios-photos-2552417-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png"],
+    ["picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-karolina-grabowska-4040566-removebg-preview.png","picture\\pexels-karolina-grabowska-4046999-removebg-preview.png","picture\\pexels-karolina-grabowska-4047146-removebg-preview.png","picture\\pexels-karolina-grabowska-4210611-removebg-preview.png","picture\\pexels-mccutcheon-3676962-removebg-preview.png"],
+    ["picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-n-voitkevich-7526022-removebg-preview.png","picture\\pexels-n-voitkevich-7615460-removebg-preview.png","picture\pexels-n-voitkevich-7615463-removebg-preview.png","picture\pexels-n-voitkevich-7615608-removebg-preview.png","picture\pexels-n-voitkevich-7852729-removebg-preview.png"]]
+  
+
+  
+    const prices = document.getElementsByClassName("product-price");
+    const titles = document.getElementsByClassName("product-title");
+    const images = document.getElementsByClassName("product-image");
+
+ used=[]
+    for (let i = 0; i < prices.length; i++) {
+        const randomPrice = (Math.random() * 100).toFixed(2); 
+        let randomIndex ;
+        do {
+            randomIndex = Math.floor(Math.random() * productTitles.length);
+        } while (used.includes(randomIndex)); 
+        
+        prices[i].innerHTML = `$${randomPrice}`;
+        titles[i].innerHTML = productTitles[randomIndex];
+        images[i].src = productImages[randomIndex];
+        used.push(randomIndex)
+    }
+    function select(item){
+       
+        const itemTitle = item.querySelector("#product-title").innerText;
+        const itemprice = item.querySelector("#product-price").innerText;
+   
+        localStorage.setItem("selectedItem", itemTitle)
+        localStorage.setItem("selectedItem2", itemprice)
+    }
 </script>
 
 
-
-<section class="background2" style="height:50vw">
-    <section style="width:100%;background-image:url(picture\\2.jpg);margin:2vw"><h1>Medicine</h1><p>We Care About you </p></section>
-    
-    <section style="border: 0.1px solid #cfc7c7;padding:0.2vw;margin-bottom:2vw;border-radius:10px">
-    <section class="item2" style="margin:none;width:15vw;height:25vw;background-image:url(picture\\6.jpg);background-size:cover"><></section>
-    <section ><h3>Penicillin</h3><br><h4 id="price">$29.1</h4></section>
-   </section>
-   
-    
-
-</section>
-
-<section class="background2" style="height:50vw">
-    <section style="width:100%;background-image:url(picture\\2.jpg);margin:2vw"><h1>Medicine</h1><p>We Care About you </p></section>
-    
-    <section style="border: 0.1px solid #cfc7c7;padding:0.2vw;margin-bottom:2vw;border-radius:10px">
-    <section class="item2" style="margin:none;width:15vw;height:25vw;background-image:url(picture\\6.jpg);background-size:cover"><></section>
-    <section ><h3>Open your mind</h3><br><h4></h4>
-    </section>
-</section>
 
     
 </section>

@@ -5,49 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Toggle Panel</title>
     <style>
-        /* 样式：隐藏板块 */
-        #panel {
-            display: none; /* 初始隐藏 */
-            width: 300px;
-            height: 200px;
-            background-color: lightblue;
-            border: 1px solid #ccc;
-            margin-top: 20px;
-            padding: 20px;
+        .product-list {
+            display: flex;
+            gap: 2vw;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+       
+        .product-card {
+            width: 15vw; 
+            height: 18vw; 
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 2vw; 
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             text-align: center;
+            font-size: 1.5vw; 
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
-        #showButton {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
+
+        .product-card .badge {
+            display: inline-block;
+            background-color: #f0f0ff;
+            color: #333;
+            font-size: 0.8em; 
+            padding: 2% 4%;
+            border-radius: 3px;
+            font-weight: bold;
+            margin-bottom: 3%;
+        }
+
+        .product-card .product-image {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 5%; 
+        }
+
+        .product-card .product-title {
+            font-size: 1.5vw; 
+            font-weight: bold;
+            margin: 2% 0;
+            color: #333;
+        }
+
+        .product-card .product-price {
+            font-size: 2vw;
+            font-weight: bold;
+            color: #e63946;
+            margin-bottom: 2%;
+        }
+
+        .product-card .product-brand {
+            font-size: 1.2em; 
+            color: #aaa;
+            margin-bottom: 5%;
+        }
+
+        .product-card .product-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1em;
+            color: #555;
+        }
+
+        .product-card .product-rating .rating-stars {
+            margin-right: 5px;
+        }
+
+        .product-card .cart-icon {
+            font-size: 2vw;
             cursor: pointer;
-            font-size: 16px;
+            margin-top: 2vw;
         }
+
+       
     </style>
 </head>
 <body>
-    <button id="showButton">Show Panel</button>
-    <div id="panel">
-        <h2>This is the panel</h2>
-        <p>Click the button again to hide this panel.</p>
-    </div>
-    <script >
-    // 获取按钮和板块元素
-const button = document.getElementById("showButton");
-const panel = document.getElementById("panel");
-
-// 绑定点击事件
-button.addEventListener("click", function () {
-    // 检查板块当前是否显示
-    if (panel.style.display === "none" || panel.style.display === "") {
-        panel.style.display = "block"; // 显示板块
-        button.textContent = "Hide Panel"; // 更改按钮文字
-    } else {
-        panel.style.display = "none"; // 隐藏板块
-        button.textContent = "Show Panel"; // 恢复按钮文字
-    }
-})</script>
+    <section class="product-list"></section>
+    <section class="product-card">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img src="https://via.placeholder.com/200x150" alt="Product Image" class="product-image">
+    
+      
+        <h3 class="product-title">Vitamine</h3>
+        <p class="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
 </body>
 </html>
 

@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<head>
+    <title>About Company</title>
+    <link href="homepage.css" rel="stylesheet" type="text/css">
+    <style>
+        body{
+            background-color: rgba(216, 218, 218, 0.71);
+        }
+        h1{color:rgb(71, 109, 71);font-weight: 600;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
+        h2{color:rgb(71, 109, 71);font-weight: 600;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
+        h3{ color:rgb(71, 109, 71);font-weight: 600;font-family:'Times New Roman', Times, serif}
+        h5{ color:rgb(110, 138, 104);font-weight: 100;font-family:'Times New Roman', Times, serif}
+        h4{color:rgb(71, 109, 71);font-weight: 500;font-family:'Times New Roman', Times, serif}
+      
+        .longsection {
+            text-align: center;width:40vw
+        }
+        .img2 {
+            background-color: #ddd;
+            width: 100%;
+            height: 150px;
+            background-size: cover;
+            background-position: center;
+        }
+        .longsection img {
+            width: 100%;
+            height: auto;
+        }
+        .more-products {
+            font-size: 2vw;
+            text-align: center;
+            margin-bottom: 20px;
+            color: rgb(71, 109, 71);
+        }
+        .box{
+            width:100vw;display: flex; align-items: center; margin-bottom: 1vw; flex-wrap: wrap;justify-content: start;
+        }
+        .img{
+            width: 5vw; height: 5vw; margin-right: 3vw;
+        }
+        .hidden-content {
+            display: none;
+            margin-top: 10px;
+            color: #333;
+            font-size: 16px;
+        }
+
+        
+        .show-more-btn {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            
+            
+            font-size: 16px;}
+
+        .show-more-btn:hover {
+            background-color: #45a049;
+        }
+        .doctor-advice {
+            justify-content: start;
+            background-color:rgba(216, 218, 218, 0.71);padding:2vw;margin-left:0;
+            width:99%; margin-top:3vw;
+            border-radius: 10px;
+            padding: 2vw 4vw;
+            align-items: start;
+            width: 90vw;
+            min-height: 20vh;
+            margin: 2vh auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .doctor-advice h2 {
+            color: #2c3e50;
+            font-size: 4vw;
+            margin-bottom: 1vw;
+        }
+        
+        .doctor-advice p {
+            color: #34495e;
+            font-size: 2.5vw;
+            margin-bottom: 3vw;
+        }
+        
+        .doctor-advice ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .doctor-advice ul li {
+            color: #16a085;
+            font-size: 2vw;
+            margin-bottom: 1vw;
+        }
+    </style>
+</head>
+<body>
+    <header class="header" style="height:70vw;width:96%;padding:1vw">
+        <section class="container" style="width:100%;" >
+            <section class="item1" style="font-size:2vw">HAISEN</section>
+            <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
+            <section class="item2"><a href="Innovation.html">Innovation</a></section>
+            <section class="item2"><a href="CompanyService.html">Company Service</a></section>
+            <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+            <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+        </section>
+
+        <section class="container0" style="height:70vw;;justify-content:start;background-color:rgba(216, 218, 218, 0.71)"  >
+            <section class="item-intro" style="height:70vw;background-color:rgba(216, 218, 218, 0.71);width:90%">
+                <div class="item-image" style="flex-direction:column;width:86%;justify-content:start;overflow:scroll">
+                    <section style="display:flex;justify-content:start;gap:1vw">
+                        <img id="1" style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image ">
+                        <img id="2" style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image">
+                    </section>
+
+                    <section style="display:flex;justify-content:center;gap:1vw">
+                        <img id="3"style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image">
+                        <img id="4"style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image">
+                    </section>
+                    <section style="display:flex;justify-content:center;gap:1vw">
+                        <img id="5"style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image">
+                        <img id="6"style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image">
+                    </section>
+                </div>
+
+                <div class="product-card" style="width:40%;height:70vw;margin:0;display:flex;justify-content:start;transform:none">
+                    <div class="rating" style="justify-content:start;display:flex;color:rgb(71, 109, 71)">
+                        <span>⭐ 4.6</span> <span class="rating-count">(97)</span>
+                    </div>
+                    <h3 class="item-title" id="selected-item" style="margin-top:4vw;justify-content:start;display:flex;color:rgb(71, 109, 71)">s</h3>
+                    <section style="margin-top:-1.5vw;margin-bottom:-1.5vw;justify-content:start;display:flex">
+                        <h5 id="id-num"></h5>
+                        <h5>| SerialPro</h5>
+                    </section>
+                  
+                    <h3 class="price" style="justify-content:start;display:flex;font-size:2vw;margin-top:1vw;margin-bottom:1vw" id="selected-item2">$14.90</h3>
+                    <h4 style="justify-content:start;display:flex;" >VARIATION:</h4>
+                    <div style="justify-content:start;display:flex">
+                        <img id="7" src="" alt="Product Variation" style="width:13vw;height:10vw;border:0.2vw solid  rgb(127, 140, 127)">
+                    </div>
+
+                    <h4 style="justify-content:start;display:flex;">Quantity:
+                        <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" required >
+                    </h4>
+                    <div style="justify-content:start;display:flex">
+                    </div>
+                    <h4 style="justify-content:start;display:flex;">Serving Size Checking: <button id="showmore" style="width:25%;font-size:1.2vw;color:rgb(33, 40, 38);border-radius:30vw;border:none ;background-color:white">▼</button></h4>
+                    <hr>
+                    <div id="hide" style="height:10vw">
+                        <form id="checking">
+                    <section style="width:100%;text-align:left;background-color:#ccdcce;padding:0.2vw">
+                    <h5 style="height:1vw">Your age:    <input type="number"  name="age" min="1" max="100" value="1" required style="height:1vw;margin-top:0";></h5>
+                    <h5 style="height:1vw;">Your weight (kg):    <input type="number"  name="kg"  max="100"  required style="height:1vw;margin-top:0;width:5vw";></h5>
+                    <h5 style="height:1vw">Your Sex:   <label>Male</label><input type="radio"  name="sex"  required style="height:1vw;margin-top:0";><label>Female</label><input type="radio"  name="sex"  required style="height:1vw;margin-top:0";></h5>
+                    <button class="deep-green-btn"type="subimit" >Check result</button>
+                    </form>
+                </section>
+                
+                </div>
+                  <script>
+                    const jj=document.getElementById("checking")
+                    jj.addEventListener("submit",function(){
+                        const s = jj.elements['age'].value
+                        const k = jj.elements['sex'].value
+                        const m=jj.elements['kg'].value
+                        const suggest = document.getElementById("")
+                        const result=0
+                        if(s<=50&&s>=30&&m>=70 || (s>=20&& 15>=m && m>=10)){
+                            result =m*0.3
+                        }
+                       
+                        
+                        else{
+                            result=m*0.2
+                        }
+
+                    })
+                  </script>
+                   
+              
+            
+                        
+
+                  
+
+                    <div style="justify-content:start;display:flex">
+                    </div>
+
+                    <p class="item-description">
+                       <button type="submit" class="item-button" style="margin-top:7vw"> Add To The Chart </button>
+                        <script>
+                            const j = document.getElementsByClassName("item-button")
+                          
+                            const hi = document.getElementById("hide")
+                            const show = document.getElementById("showmore")
+                            hi.style.display='none'
+                            show.addEventListener("click",function(){
+                                if (hi.style.display === 'none' || hi.style.display === '') {
+                                    hi.style.display = 'block';
+                                    show.innerHTML = '▲'; }
+                               
+                               else{     hi.style.display = 'none'; 
+                                    show.textContent = '▼'; }
+                                }
+                            )
+                        </script>
+                    </p>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </header>
+
+    <div class="background-product" style="height:40vw">
+        <h3 class="more-products">More Products</h3>
+        <ul id="container" style="margin-left:4vw" >
+            <li class="longsection" >
+                <section class="product-card" onclick="select(this);window.location.href='product.html'" style="margin-top:0">
+        
+                    <div class="badge">BEST SELLER</div>
+                
+                   
+                    <img src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image" style="width:15vw;height:15vw">
+                
+                  
+                   
+                    <h3 class="product-title" id="product-title">Vitamine</h3>
+                    
+                    
+                    <p class="product-price" id="product-price" 
+                >s</p>
+                    
+                
+                    
+                    <div class="product-rating">
+                        <span class="rating-stars">⭐ 4.9</span>
+                        <span class="rating-count">(8)</span>
+                    </div>
+                
+                 
+                    <div class="cart-icon">🛒</div>
+                </section>
+            </li>
+
+        
+            <li class="longsection">
+                <section class="product-card" onclick="select(this);window.location.href='product.html'" style="margin-top:0">
+        
+                    <div class="badge">BEST SELLER</div>
+                
+                   
+                    <img src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image" style="width:15vw;height:15vw">
+                
+                  
+                   
+                    <h3 class="product-title" id="product-title">Vitamine</h3>
+                    
+                    
+                    <p class="product-price" id="product-price">s</p>
+                    
+                
+                    
+                    <div class="product-rating">
+                        <span class="rating-stars">⭐ 4.9</span>
+                        <span class="rating-count">(8)</span>
+                    </div>
+                
+                 
+                    <div class="cart-icon">🛒</div>
+                </section>
+            </li>
+            <li class="longsection">
+                <section class="product-card" onclick="select(this);window.location.href='product.html'" style="margin-top:0">
+        
+                    <div class="badge">BEST SELLER</div>
+                
+                   
+                    <img src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image"style="width:15vw;height:15vw">
+                
+                  
+                   
+                    <h3 class="product-title" id="product-title">Vitamine</h3>
+                    
+                    
+                    <p class="product-price" id="product-price" 
+                >s</p>
+                    
+                
+                    
+                    <div class="product-rating">
+                        <span class="rating-stars">⭐ 4.9</span>
+                        <span class="rating-count">(8)</span>
+                    </div>
+                
+                 
+                    <div class="cart-icon">🛒</div>
+                </section>
+            </li>
+           
+            </li>
+        </ul>
+    </div>
+    <div class="background-product" style="height:32vw">
+        <h2 style="margin-bottom:4vw;text-align:left">OUR PROMISE</h2>
+        <div style="margin-bottom: 20px;">
+
+            <div class="box">
+                <div class="Ccontainer" style="margin-bottom:2vw">
+                    <img src="" width="100vw"  alt="ssdsd"height="100vw">
+                <div>
+                <h3 style="font-size: 2vw; margin: 0;">Exceptional Quality</h3>
+               
+                <h4 style="margin: 0; color: #333;">We ensure every product meets the highest standards of craftsmanship and excellence.</4>
+                </div>
+        </div>
+
+
+        <div style="margin-bottom: 20px;">
+            <div class="box">
+                <div class="Ccontainer" style="margin-bottom:2vw">
+                    <img src="" width="100vw"  alt="ssdsd"height="100vw">
+                <div>
+                <h3 style="font-size: 2vw; margin: 0;">Exceptional Quality</h3>
+               
+                <h4 style="margin: 0; color: #333;">We ensure every product meets the highest standards of craftsmanship and excellence.</4>
+                </div>
+        </div>
+
+
+        <div style="margin-bottom: 20px;">
+            <div class="box">
+                <div class="Ccontainer" style="margin-bottom:2vw">
+                    <img src="" width="100vw"  alt="ssdsd"height="100vw">
+                <div>
+                <h3 style="font-size: 2vw; margin: 0;">Exceptional Quality</h3>
+               
+                <h4 style="margin: 0; color: #333;">We ensure every product meets the highest standards of craftsmanship and excellence.</4>
+                </div>
+        </div>
+
+            </div>
+           
+        </div>
+        
+
+    </div>
+
+
+
+
+    <div class="doctor-advice">
+        <h2></h2>
+        <p></p>
+        <ul>
+        <li>asdasd</li>
+            
+        </ul>
+    </div>
+        
+
+    </div>
+    
+    
+    <div class="footer"></div>
+    <script>
+        const selectedItem = localStorage.getItem("selectedItem");
+        const selectedItem2 = localStorage.getItem("selectedItem2");
+        
+        const random0 = Math.floor(10*Math.random()+2)+" HRS ";
+        const m = document.getElementById("id-num");
+        m.innerHTML=random0;
+        const displayElement = document.getElementById("selected-item");
+        const displayElement2 = document.getElementById("selected-item2");
+        displayElement.innerText = `${selectedItem}`;
+        displayElement2.innerText = `${selectedItem2}`;
+        
+        const random2 = Math.floor(100*Math.random())
+        const s =document.getElementsByClassName("rating-count")
+        s[0].innerHTML = "("+random2+")"
+
+
+
+
+
+        const productTitles = ["Penicillin", "Ceftriaxone", "Vitamins", "Fish Oil", "Bhruove","Penicillin", "erythromycin", "org vege oil", "ammon chlor drug"];
+        const productImages = ["picture\\m1.png", "picture\\m2.png", "picture\\m3.png", "picture\\m4.png", "picture\\m5.png","picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png","picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png"];
+        const set1=["picture\\pexels-anna-nekrashevich-8533223-removebg-preview.png","picture\\pexels-binoid-cbd-1990665-3612182-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png","picture\\pexels-eva-bronzini-6914588-removebg-preview.png","picture\\pexels-fotios-photos-2552417-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png", "picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-karolina-grabowska-4040566-removebg-preview.png","picture\\pexels-karolina-grabowska-4046999-removebg-preview.png","picture\\pexels-karolina-grabowska-4047146-removebg-preview.png","picture\\pexels-karolina-grabowska-4210611-removebg-preview.png","picture\\pexels-mccutcheon-3676962-removebg-preview.png", "picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-n-voitkevich-7526022-removebg-preview.png","picture\\pexels-n-voitkevich-7615460-removebg-preview.png","picture\\pexels-n-voitkevich-7615608-removebg-preview.png","picture\\pexels-n-voitkevich-7852729-removebg-preview.png"]
+      
+  const used0=[1,2,3,4,5,6,7]
+  const used2=[]
+   for(let i = 1;i<used0.length+1;i++){
+       const randompic=Math.floor((Math.random()*set1.length))
+        document.getElementById(`${i}`).src=set1[randompic]
+       
+   }
+        const prices = document.getElementsByClassName("product-price");
+        const titles = document.getElementsByClassName("product-title");
+        const images = document.getElementsByClassName("product-image");
+    
+        const used = []
+        for (let i = 0; i < prices.length; i++) {
+
+            const randomPrice = (Math.random() * 100).toFixed(2);
+            let randomIndex;
+           
+
+            if(titles[i].innerHTML == selectedItem){
+                continue;
+            }
+           
+
+            do {
+                randomIndex = Math.floor(Math.random() * productTitles.length);
+            } while (used.includes(randomIndex)); 
+
+            prices[i].innerHTML = `$${randomPrice}`;
+            titles[i].innerHTML = productTitles[randomIndex];
+            images[i].src = productImages[randomIndex];
+            used.push(randomIndex)
+        }
+
+        function select(item){
+           
+            const itemTitle = item.querySelector("#product-title").innerText;
+            const itemprice = item.querySelector("#product-price").innerText;
+       
+            localStorage.setItem("selectedItem", itemTitle)
+            localStorage.setItem("selectedItem2", itemprice)
+        }
+    </script>
+</body>
+</html>
