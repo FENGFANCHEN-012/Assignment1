@@ -6,76 +6,172 @@
 <title>Center and Offset Example</title>
 <link href="homepage.css" rel="stylesheet" type="text/css">
 <style>
-
+    .img3{
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        
+        width: 37vw;
+        height:22vw;
+        background-color: white;
+       border:#3b693e solid
+      
+    }
+    .img3:hover{
+        transform: scale(1.01);
+    }
+    .img3:active{
+        transform: scale(0.98);}
+        .close-btn, .next-btn {
+            background: #3b693e;
+            border: none;
+            color: white;
+            padding: 0.5rem 1rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .close-btn:hover, .next-btn:hover {
+            background: #2a4d2c;
+        }
+        
+        #popup-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+        }
 </style>
 </head>
 <body>
 <header class="header" >
 
-<section class="container0">
+<section class="container0" >
 
 <section style="background-image:url(picture\\1.jpg);background-size:cover">
     <section class="container">
-    <section class="item1">HAISEN</section>
-    <section class="item2" style="margin-left:7vw">About Company</section>
-    <section class="item2">Inovation</section>
-    <section class="item2">Company Service</section>
-    <section class="item2">Market Strategy</section>
-    <section class="item2">Our Responsibility</section>
-    </section>
-    <hr>
-    <section class="middle2" >
-        
-        <div class="slogan">Embrace a healthy and natural lifes</div>
-        <div class="convert"><button onclick="next(1)">></button></div>
-    </section>
-    <section class="custom-button"style="margin-left:14vw;margin-top:1vw;background-color:aquamarine;font-size:2vw;width:11.4vw;height:2.5vw;padding:0.3vw">
-        Explore More
-    </section>
-
-</section >
-
-<section style="background-image:url(picture\\4.jpg);background-size:cover">
-    <section class="container">
-    <section class="item1">HAISEN</section>
-    <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
+        <section class="item1">HAISEN</section>
+    <section class="item2" style="margin-left:1vw"><a href="About Company.html">About Company</a></section>
     <section class="item2"><a href=Innovation.html>Innovation</a></section>
     <section class="item2"><a href=CompanyService.html>Company Service</a></section>
     <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
     <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+    <div class="search-container" style="width:2vw;">
+        <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search..." 
+            oninput="filterResults()">
+        <button class="search-btn" onclick="performSearch()">Search</button>
+    </div>
+    
     </section>
     <hr>
-    <section class="middle2" >
+    <div style="background-color:rgb(50, 84, 84,0.2);width:35vw;height:12vw;border-radius:2vw">
+    <section class="middle2"  >
         
         <div class="slogan">Embrace a healthy and natural lifes</div>
-        <div class="convert"><button onclick="next(1)">></button></div>
+        <button class="deep-green-btn"style="margin-left: 40vw;
+    display: flex;
+    justify-content: end;
+    width:2vw;
+    line-height: normal;
+    align-items: center;
+  
+    border:none;
+    opacity:0.4
+"  onclick="next(1)">></button>
     </section>
-    <section class="custom-button"style="margin-left:14vw;margin-top:1vw;background-color:aquamarine;font-size:2vw;width:11.4vw;height:2.5vw;padding:0.3vw">
+    <button class="custom-button" onclick="location.href='CompanyService.html'">
         Explore More
-    </section>
+    </button>
 
+
+</section >
+</div>
+
+<section style="background-image:url(picture\\4.jpg);background-size:cover">
+    <section class="container">
+    <section class="item1">HAISEN</section>
+    <section class="item2" style="margin-left:1vw"><a href="About Company.html">About Company</a></section>
+    <section class="item2"><a href=Innovation.html>Innovation</a></section>
+    <section class="item2"><a href=CompanyService.html>Company Service</a></section>
+    <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+    <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+    <div class="search-container" style="width:2vw;">
+        <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search..." 
+            oninput="filterResults()">
+        <button class="search-btn" onclick="performSearch()">Search</button>
+    </div>
 </section>
+    <hr>
+    <div style="background-color:rgb(50, 84, 84,0.2);width:35vw;height:12vw;border-radius:2vw">
+        <section class="middle2"  >
+            
+            <div class="slogan">Embrace a healthy and natural lifes</div>
+            <button class="deep-green-btn"style="margin-left: 40vw;
+        display: flex;
+        justify-content: end;
+        width:2vw;
+        line-height: normal;
+        align-items: center;
+      
+        border:none;
+        opacity:0.4
+    "  onclick="next(1)">></button>
+        </section>
+        <button class="custom-button" onclick="location.href='CompanyService.html'">
+            Explore More
+        </button>
+    
+    
+    </section >
+    </div>
 
 <section style="background-image:url(picture\\6.jpg);background-size:cover">
     <section class="container">
-    <section class="item1">HAISEN</section>
-    <section class="item2" style="margin-left:7vw">About Company</section>
-    <section class="item2">Inovation</section>
-    <section class="item2">Company Service</section>
-    <section class="item2">Market Strategy</section>
-    <section class="item2">Our Responsibility</section>
+        <section class="item1">HAISEN</section>
+        <section class="item2" style="margin-left:1vw"><a href="About Company.html">About Company</a></section>
+        <section class="item2"><a href=Innovation.html>Innovation</a></section>
+        <section class="item2"><a href=CompanyService.html>Company Service</a></section>
+        <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+        <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+    <div class="search-container" style="width:2vw;">
+        <input 
+            type="text" 
+            id="search-input" 
+            placeholder="Search..." 
+            oninput="filterResults()">
+        <button class="search-btn" onclick="performSearch()">Search</button>
+    </div>
     </section>
     <hr>
-    <section class="middle2" >
-        
-        <div class="slogan">Embrace a healthy and natural lifes</div>
-        <div class="convert"><button onclick="next(1)">></button></div>
-    </section>
-    <section class="custom-button"style="margin-left:14vw;margin-top:1vw;background-color:aquamarine;font-size:2vw;width:11.4vw;height:2.5vw;padding:0.3vw">
-        Explore More
-    </section>
-
-</section>
+    <div style="background-color:rgb(50, 84, 84,0.2);width:35vw;height:12vw;border-radius:2vw">
+        <section class="middle2"  >
+            
+            <div class="slogan">Embrace a healthy and natural lifes</div>
+            <button class="deep-green-btn"style="margin-left: 40vw;
+        display: flex;
+        justify-content: end;
+        width:2vw;
+        line-height: normal;
+        align-items: center;
+      
+        border:none;
+        opacity:0.4
+    "  onclick="next(1)">></button>
+        </section>
+        <button class="custom-button" onclick="location.href='CompanyService.html'">
+            Explore More
+        </button>
+    
+    
+    </section >
+    </div>
 
 </section>
 </header>
@@ -100,11 +196,11 @@ const pages = Array.from(first.children);
 let now = 0; 
 
 const time = 0;
-for(const i =0;i<1000000;i++){
-    setTimeout(next,30000,1)
-}
+
 
 function next(step) {
+
+
   now += step; 
 
 
@@ -113,40 +209,141 @@ function next(step) {
   } else if (now < 0) {
     now = pages.length - 1; 
   }
-first.style.transform = `translateX(-${now * 100}%)`
+first.style.transform = `translateX(-${now * 101}%)`
   
 }
+
+
+
+const searchData = [
+    { name: "Market Strategy", link: "Market strategy.html" },
+    { name: "About Company", link: "About company.html" },
+    { name: "Innovation", link: "Innovation.html" },
+    { name: "Company Service", link: "Company service.html" },
+    { name: "Our Responsibility", link: "Social responsibility.html" }
+];
+
+
+function filterResults() {
+    const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+    const resultsContainer = document.getElementById("search-results");
+
+  
+    resultsContainer.innerHTML = null;
+
+    if (input) {
+      
+        const filteredResults = searchData.filter(item =>
+            item.name.toLowerCase().startsWith(input)
+        );
+
+        if (filteredResults.length > 0) {
+            resultsContainer.style.display = "block"; 
+            filteredResults.forEach(item => {
+                const resultElement = document.createElement("p");
+                resultElement.innerHTML = item.name;
+                resultElement.onclick = () => location.href = item.link; 
+                resultsContainer.appendChild(resultElement);
+            });
+        } else {
+            resultsContainer.style.display = "block"; 
+            resultsContainer.innerHTML = "<p>No results found.</p>";
+        }
+    } else {
+        resultsContainer.style.display = "none"; 
+    }
+}
+
+
+function performSearch() {
+    const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+    const matchingItem = searchData.find(item =>
+        item.name.toLowerCase().startsWith(input) 
+    );
+
+    if (matchingItem) {
+        location.href = matchingItem.link; 
+    } else {
+        alert("No matching results found!");
+    }
+}
+
+
+
 </script>
 
 
 <hr>
-<main>
-    <h1 style="margin-top:10vw">About Company</h1>
-     <section style="display:flex;justify-content:center">
-        <button class="button" onclick="Slide(0)">1</button>
-        <button class="button" onclick="Slide(1)">2</button>
-        <button class="button" onclick="Slide(2)" >3</button>
+
+<h1 style="margin-top:10vw">About Company</h1>
+<section style="background-position:center;background-size:cover;background-image:url(picture\\pexels-sevenstormphotography-443383.jpg)">
+    
+    <section style="display:flex;align-items:center;margin-top:1vw;padding:0vw;height:50vw">
+    
+    <section style="width:4vw;display:flex;justify-content:center;position:relative;flex-direction:column;white-space: nowrap;">
+        <button class="button" onclick="Slide(0)"></button>
+        <button class="button" onclick="Slide(1)"></button>
+        <button class="button" onclick="Slide(2)" ></button>
     </section>
-    <section class="background">
+    <section class="background"  style="background-color:#f7f3f3a2">
        
-    <ul id="container2" >
+      <div id="container2">
         <li class="containers">
-            <div  class="img" ></div>
-            <div class="main">first</div>
+            <section class="section" id="section1" style="width:40vw;   margin-top:5vw;">
+                <div class="section-content">
+                    <h2>Our Story</h2>
+                    <p>
+                       From 2000 to 2024, We have made a lot of differences, and we still keep improving, this is HAISEN spirit
+                    </p>
+                    <button class="deep-green-btn" onclick="location.href='About company.html'">Learn More</button>
+                
+                </div>
+            </section>
+                <div class="section-image" >
+                    <img style="width:30vw;height:25vw"src="picture\\pexels-nietjuh-796602.jpg" alt="Our Mission">
+                </div>
+            
+        </li>
+        
+        <li class="containers">
+            <section class="section" id="section1" style="width:40vw;   margin-top:5vw;">
+                <div class="section-content">
+                    <h2>Our Value</h2>
+                    <p>
+                       Our Value is to serve customer high quality medicine, service. Be the innovative poineer in our industry.
+                    </p>
+                    <button class="deep-green-btn" onclick="location.href='About company.html'">Learn More</button>
+                
+                </div>
+            </section>
+                <div class="section-image" >
+                    <img style="width:30vw;height:25vw"src="picture\\pexels-pixabay-39866.jpg" alt="Our Mission">
+                </div>
+            
         </li>
 
         <li class="containers">
-            <div  class="img" ></div>
-            <div class="main">second</div>
-        </li>
-
-        <li class="containers">
-            <div class="img"></div>
-            <div class="main">third</div>
+            <section class="section" id="section1" style="width:40vw;   margin-top:5vw;">
+                <div class="section-content">
+                    <h2>Company Scope</h2>
+                    <p>
+                        We are dedicated to providing the best solutions for your business needs, ensuring growth and success. We are doing variety of scope try to meet you all need.
+                    </p>
+                    <button class="deep-green-btn" onclick="location.href='About company.html'">Learn More</button>
+                
+                </div>
+            </section>
+                <div class="section-image" >
+                    <img style="width:30vw;height:25vw"src="picture\pexels-jjagtenberg-103127.jpg" alt="Our Mission">
+                </div>
+            
         </li>
             
-        </ul>    
+    </div>
+   
     </section>
+</section>
+</section>
     <script>
       
         const trace = document.querySelector('#container2');
@@ -180,47 +377,78 @@ first.style.transform = `translateX(-${now * 100}%)`
         
 
     </script>
-</main>
+</section>
 
 
 
 
-    <title>Company Service</title>
-<main>
-    <h1  style="margin-top:20vw">Company Service</h1>
+   
+<section style="display:flex;align-items:center;margin-top:10vw;padding:0vw;height:40vw;background-position:center;background-size:cover;background-image:url(picture\\pexels-googledeepmind-18069157.jpg)">
+    <h1  style="margin-top:vw">Company Service</h1>
     <div class="longcontainer">
-
+      
         <ul id="container">
-            <li class="longsection">
-                <div class="img2"></div>
-                <div style="text-align:center;position:relative">jj</div>
+            <li class="longsection" onclick="location.href='product.html'">
+                <img class="img2"  src="">
+                <div style="bottom:4vw;position:relative">
+                <div class="product-price" style="text-align:center;position:relative"></div>
+                <div class='product-title'style="text-align:center;position:relative"></div>
+            </div>
             </li>
+            <li class="longsection" onclick="location.href='product.html'">
+                <img class="img2"  src="">
+                <div style="bottom:4vw;position:relative">
+                <div class="product-price" style="text-align:center;position:relative"></div>
+                <div class='product-title'style="text-align:center;position:relative"></div>
+            </div>
+            </li>
+            <li class="longsection" onclick="location.href='product.html'">
+                <img class="img2"  src="">
+                <div style="bottom:4vw;position:relative">
+                <div class="product-price" style="text-align:center;position:relative"></div>
+                <div class='product-title'style="text-align:center;position:relative"></div>
+            </div>
+            <li class="longsection" onclick="location.href='product.html'">
+                <img class="img2"  src="">
+                <div style="bottom:4vw;position:relative">
+                <div class="product-price" style="text-align:center;position:relative"></div>
+                <div class='product-title'style="text-align:center;position:relative"></div>
+            </div>
+            <li class="longsection" onclick="location.href='product.html'">
+                <img class="img2"  src="">
+                <div style="bottom:4vw;position:relative">
+                <div class="product-price" style="text-align:center;position:relative"></div>
+                <div class='product-title'style="text-align:center;position:relative"></div>
+            </div>
+
+            </li>
+            <li class="longsection" onclick="location.href='blood.html'">
+                <img class="img3"  src="">
+                <div style="bottom:4vw;position:relative">
+                <div  style="text-align:center;position:relative">$20000</div>
+                <div style="text-align:center;position:relative">Blood Glucose Monitor</div>
+            </div>
+
+            </li>
+            <li class="longsection" onclick="location.href='device.html'">
+                <img class="img3"  src="">
+                <div style="bottom:4vw;position:relative">
+                <div  style="text-align:center;position:relative">$18000</div>
+                <div style="text-align:center;position:relative">Electrocardiogram (ECG) Machine</div>
+            </div>
+
+            </li>
+
             
-            <li class="longsection">
-                <div class="img2"></div>
-                <div style="text-align:center;position:relative">jj</div>
-            </li>
-            <li class="longsection">
-                <div class="img2"></div>
-                <div style="text-align:center;position:relative" >jj</div>
-            </li>
-            <li class="longsection">
-                <div class="img2"></div>
-                <div style="text-align:center">jj</div>
-            </li>
-            <li class="longsection">
-                <div class="img2"></div>
-                <div style="text-align:center">jj</div>
-            </li>
-            <li class="longsection">
-                <div class="img2"></div>
-                <div style="text-align:center">jj</div>
-            </li>
-            <li class="longsection">
-                <div class="img2"></div>
-                <div style="text-align:center">jj</div>
-            </li>
-          
+
+
+
+
+
+
+
+
+           
         </ul>
         <div class="button2 left" onclick="moveSlide(-1)">‹</div>
         <div class="button2 right" onclick="moveSlide(1)">›</div>
@@ -249,87 +477,190 @@ first.style.transform = `translateX(-${now * 100}%)`
             moveToSlide(currentIndex);
         }
     </script>
-</main>
+</section>
 
 <h1 style="margin-top:25vw;">Market Strategy</h1>   <!--first-->
-   <section style="height:56vw;background-color:rgb(51, 105, 105);width:95%;margin-left:2.5%;display:flex;justify-content:start;gap:3vw;">
-     
-        
+<section class="background"  style="width:100%;display:flex;align-items:center;justify-content:center;background-color:#f7f3f3a2">
        
-       <div class="bigimage"></div>
-        <div class="bigimage"></div>
-        <div class="bigimage"></div>
+    <div id="container2" style="background-size:cover;background-image:url('picture\\pexels-pixabay-260024.jpg')">
+      
+          <section class="section" id="section1" style="width:100%; height:100%;  margin-top:38vw;">
+              <div class="section-content" style="color:white">
+                  <h2>Leading a great future</h2>
+                  <p>
+                     From 2000 to 2024, We have made a lot of differences, and we still keep improving, this is HAISEN spirit
+                  </p>
+                  <button class="deep-green-btn" onclick="showDetails()">Learn More</button>
+                  
+              </div>
+          </section>
+             
+          
+     
+      </div>
+
+      </section>
+      <div class="hides" id="popup">
+        <button class="close-btn" onclick="hideDetails()">Back</button>
+        <img id="popup-image" src="picture/pexels-tima-miroshnichenko-6235665.jpg" style="width:100vw;"alt="Background" >
+        <div class="content" id="popup-content" style="margin-top:20vw;width:50vw;height:50vw;">
+            <p>Content for slide 1</p>
+            
         
-</section>
+            
+        </div>
+       
+        <button class="next-btn" onclick="nextSlide()">Next ›</button>
+    </div>
+      <script>
+        const slid = [
+        {
+            image: "picture/pexels-tima-miroshnichenko-6235665.jpg",
+            
+            content: "Redefining Global Healthcare through Innovation and Strategy."
+        },
+        {
+            image: "picture/pexels-googledeepmind-18069157.jpg",
+            content: "Shaping a Healthier Future with Visionary Pharmaceutical Solutions"
+        },
+        {
+            image: "picture/pexels-sevenstormphotography-443383.jpg",
+            content: "Leading the Path to Better Health with Strategic Excellence."
+        }
+    ];
     
+    let currentSlide = 0;
+    
+    function showDetails() {
+        const popup = document.getElementById("popup");
+        popup.classList.add("active");
+        updateSlide(); 
+    }
+    
+    function hideDetails() {
+        const popup = document.getElementById("popup");
+        popup.classList.remove("active");
+    }
+    
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length; 
+        updateSlide();
+    }
+    
+    function updateSlide() {
+        const imageElement = document.getElementById("popup-image");
+        const contentElement = document.getElementById("popup-content");
+    
+      
+        imageElement.src = slid[currentSlide].image;
+    
+    
+        contentElement.innerHTML = `
+            <p>${slid[currentSlide].content}</p>
+        
+            <button class="deep-green-btn" onclick="location.href='Market strategy.html'">Click Me</button>
+        `;
+    }
+</script> 
 
 
     <h1 style="margin-top:20vw">Social Responsibility</h1>   <!--first-->
-    <section class="background">
-        <section style="display:flex;justify-content:center;position:relative">
-            <button class="button_" onclick="SSlide(0)" >__</button>
-            <button class="button_" onclick="SSlide(1)" >__</button>
-            <button class="button_" onclick="SSlide(2)" >__</button>
-            <button class="button_" onclick="SSlide(3)" >__</button>
-        </section>
-        <ul class="container3" >
-            
-          
-            <li class="containers">
-                <div  class="img" ></div>
-                <div class="main">first</div>
-            </li>
-            <li class="containers">
-                <div  class="img" ></div>
-                <div class="main">second</div>
-            </li>
-            <li class="containers">
-                <div  class="img" ></div>
-                <div class="main">third</div>
-            </li>
-            <li class="containers">
-                <div  class="img" ></div>
-                <div class="main">forth</div>
-            </li>
-            
-           
-            
-            
-        </ul>
+  
+    <section class="background"  style="width:100%;display:flex;align-items:center;justify-content:center;background-color:#f7f3f3a2">
        
-        
-    </section>
+        <div id="container2" style="background-position:center;background-size:cover;background-image:url(picture\\pexels-mikhail-nilov-7682200.jpg)">
+          
+              <section class="section" id="section1" style="width:100%; height:100%;  margin-top:38vw;">
+                  <div class="section-content" style="color:black;font-weight:900">
+                      <h2>Responsibility not just a word</h2>
+                      <p>
+                        Explore more about our company's community, responsibility to our society
+                      </p>
+                      <button class="deep-green-btn" onclick="location.href='Social responsibility.html'">Learn More</button>
+                  
+                  </div>
+              </section>
+                 
+              
+         
+          </div>
+    
+          </section>
+    
+
+
+
+
+
+    <div class="footer">
+        <div class="container">
+           
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <ul>
+                    <li><a href="#">Who We Are</a></li>
+                    <li><a href="#">Our Mission</a></li>
+                    <li><a href="#">Our Values</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><a href="mailto:info@company.com">Email: info@company.com</a></li>
+                    <li><a href="tel:+123456789">Phone: +1 234 567 89</a></li>
+                    <li><a href="#">Office Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+     
+        <div style="margin-top: 3vw; font-size: 0.9vw; color: #7a7a7a;">
+            © 2024 Your Company. All rights reserved.
+        </div>
+    </div>
+
     <script>
-        const track3 = document.querySelector('.container3');
-        const slides3 = Array.from(track3.children);
-        
-        let indexs = 0;
-
-        function SSlide(current) {
-          
-            const slideWidth3 = slides3[0].getBoundingClientRect().width;
+        const productTitles = ["Penicillin", "Ceftriaxone", "Vitamins", "Fish Oil", "Bhruove","Penicillin", "erythromycin", "org vege oil", "ammon chlor drug"];
+        const productImages = ["picture\\m1.png", "picture\\m2.png", "picture\\m3.png", "picture\\m4.png", "picture\\m5.png","picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png","picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png"];
+        const set1=[["picture\\pexels-anna-nekrashevich-8533223-removebg-preview.png","picture\\pexels-binoid-cbd-1990665-3612182-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png","picture\\pexels-eva-bronzini-6914588-removebg-preview.png","picture\\pexels-fotios-photos-2552417-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png"],
+        ["picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-karolina-grabowska-4040566-removebg-preview.png","picture\\pexels-karolina-grabowska-4046999-removebg-preview.png","picture\\pexels-karolina-grabowska-4047146-removebg-preview.png","picture\\pexels-karolina-grabowska-4210611-removebg-preview.png","picture\\pexels-mccutcheon-3676962-removebg-preview.png"],
+        ["picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-n-voitkevich-7526022-removebg-preview.png","picture\\pexels-n-voitkevich-7615460-removebg-preview.png","picture\pexels-n-voitkevich-7615463-removebg-preview.png","picture\pexels-n-voitkevich-7615608-removebg-preview.png","picture\pexels-n-voitkevich-7852729-removebg-preview.png"]]
+      
     
-          
-            indexs = current;
-        
-           
-            track3.style.transform = `translateX(-${((slideWidth3+ 500)* indexs)}px)`;
-        
+      
+        const prices = document.getElementsByClassName("product-price");
+        const titles = document.getElementsByClassName("product-title");
+        const images = document.getElementsByClassName("img2");
+    
+     used=[]
+        for (let i = 0; i < prices.length; i++) {
+            const randomPrice = (Math.random() * 100).toFixed(2); 
+            let randomIndex ;
+            do {
+                randomIndex = Math.floor(Math.random() * productTitles.length);
+            } while (used.includes(randomIndex)); 
+            
+            prices[i].innerHTML = `$${randomPrice}`;
+            titles[i].innerHTML = productTitles[randomIndex];
+            images[i].src = productImages[randomIndex];
+            used.push(randomIndex)
         }
-
+        function select(item){
+           
+            const itemTitle = item.querySelector("#product-title").innerText;
+            const itemprice = item.querySelector("#product-price").innerText;
        
+            localStorage.setItem("selectedItem", itemTitle)
+            localStorage.setItem("selectedItem2", itemprice)
+        }
     </script>
-    
-
-
-
-
-
-<p class="footer">sdasdasdas
-
-
-</p>
-
-
 </body>
 </html>

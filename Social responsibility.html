@@ -1,38 +1,218 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>    About Company</title>
-      
-    
-    <link href="homepage.css" rel="stylesheet" type="text/css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Social Responsibility</title>
+    <link rel="stylesheet" href="homepage.css">
+    <style>
+        .body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .Container{
+            display:flex;
+            
+            height:50vw;
+            background-image: url("picture\\pexels-shvetsa-3683077-removebg-preview.png");
+            background-position: start;
+            margin-top:1vw;
+            overflow: scroll;
+            width:100%;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+ 
+        }
+        h2{
+            font-weight:800;
+            font-size: 4vw;
+            color:rgb(78, 102, 94);
+            margin-top:10vw;
+        }
+        h3{margin-top:25vw;
+            font-weight:500;
+            font-size:3vw; color:rgb(78, 102, 94)
+        }
+        .button{
+            height:4vw;
+            width:12vw;
+            background-color: rgb(70, 105, 89);
+            color: rgb(235, 243, 240);
+            border-radius: 2vw;;
+            padding:0.5vw;
+            font-size:2vw;;
+        }
+        .button:hover{
+            background-color: rgb(101, 130, 120);
+        }
+        .content{
+            flex-basis:100vw;
+            width:100vw;
+        
+padding:2vw;  flex-shrink: 0
+        }
+        .hides{
+            
+            position: fixed;
+            top: 0;
+            left: 0;
+           font-size:2vw;
+            width:100vw;
+            height:100vh;
+            display: flex;
+            background-color: rgba(190, 219, 201, 0.8);
+            font-style: italic;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+ z-index: 99;
+        }
+       
+        
+        .hides.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .hides .content {
+            text-align: center;
+            margin-top: 2vw;
+            font-size: 1.8vw;
+            color: #2a3c34;
+        }
+        .hides img {
+            width: 40vw;
+            height: auto;
+            border-radius: 1vw;
+            margin-bottom: 2vw;
+        }
+        .hides .close-btn {
+            position: absolute;
+            top: 2vw;
+            left: 2vw;
+            background-color: red;
+            color: white;
+            border: none;
+            border-radius: 0.5vw;
+            font-size: 1.5vw;
+            padding: 0.5vw 1vw;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <header class="header" style="height:35vw;background-image:url('pexels-francesco-ungaro-2325447.jpg');">
-        <section class="container" style="width:100%;height:10%" >
-         <section class="item1" style="font-size:2vw">HAISEN</section>
-         <section class="item2">Flourishing our life together<img src=""> </section>  
+
+
+  <header class="header" style="height:35vw; background-image:url('picture\\4.jpg');">
+        <section class="container" style="width:100%;height:4vw">
+            <section class="item1" style="font-size:2vw"><a href="HomePage.html">HAISEN</a></section>
+            <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
+            <section class="item2"><a href="Innovation.html">Innovation</a></section>
+            <section class="item2"><a href="CompanyService.html">Company Service</a></section>
+            <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+            <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+            <section style="margin-left:5vw; margin-top:1vw;"><button>Search</button></section>
+        </section>
+        <hr style="margin-top:0;">
+        <section class="Ccontainer">
+            <section class="item1" style="margin-top:9vw;">Company Service</section>
+        </section>
+    </header>
+
+
+
+    <h2>Sustainability: for our future</h2>
+    <div class="Container">
+        <div class="content" style="background-image:url(picture\\pexels-shvetsa-4421501.jpg)">
+            <h3>eco-friendly ingredient</h3>
+            <p>We using the natural deposible material to make the medicine, besides our process of making medicine is also non-polluting.</p>
+            
+            <p>We reduce, reuse, and recycle! From eco-friendly materials to zero-waste packaging, we’re giving Mother Nature a big hug.</p>
+            
+            <button class="button" onclick="showDetails()">How?</button>
+        
+  
+
+
+    <div class="hides" id="popup">
+      
+        <button class="close-btn" onclick="hideDetails()">Back</button>
+ 
+        <img src="picture/pexels-tima-miroshnichenko-6235665.jpg" alt="Eco-friendly Process">
      
-         <section class="container1"><button onclick="open()"></button>Navigate</section>
-         <section style="margin-left:65vw">Search</section>
-         </section>
-         <hr style="margin-top:0">
-         <section class="Ccontainer">
-             <section class="item1" style="margin-top:9vw"  >Company Service</section>
-        </header>
+        <div class="content" style="width:50%;display:flex;align-items:center;justify-content:center">
+            <p>
+                Creating non-polluting medicines is not just about innovation but also about responsibility. 
+                By embracing sustainable ingredients, green chemistry, efficient manufacturing, biodegradable packaging, and ethical practices, 
+                we aim to make a difference for the planet and humanity.
+            </p>
+        </div>
+    </div>
+    </div>
+    </div>
 
+    <script>
+     
+        function showDetails() {
+            document.getElementById('popup').classList.add('active');
+        }
 
-<section class="background2" style="height:70vw">
-    <h1>Innovation Journey</h1>
-
-
-
+        
+        function hideDetails() {
+            document.getElementById('popup').classList.remove('active');
+        }
+    </script>
 </section>
-<h1>Innovation Medicine</h1>
-<section class="background2" style="height:50vw">
+        
+
+        
+    </div>
+    <h2>Community</h2>
+    <div class="Container">
+        <div class="content" style="background-image:url(picture\\pexels-shvetsa-4421501.jpg)">
+            <h3>Build a healthy life together</h3>
+            <p>We have develop our community all over the south asia
+            We discuss, share, our experience and to build a better haisen world</p>
+          
+            <p>Why not share your story with us, join our big community, find more special treatment and medicine life in haisen community</p>
+        <button id="join us" class="button" onclick="location.href='join us.html'">Join US !</button>
+        </div>
+</div>
+
+<h2></h2>
+<div class="footer">
+    <div class="container">
+       
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">Our Values</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="mailto:info@company.com">Email: info@company.com</a></li>
+                <li><a href="tel:+123456789">Phone: +1 234 567 89</a></li>
+                <li><a href="#">Office Locations</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+ 
+    <div style="margin-top: 3vw; font-size: 0.9vw; color: #7a7a7a;">
+        © 2024 Your Company. All rights reserved.
+    </div>
+</div>
 
 
-    <section class="footer">
-
-    
-    </section>
-</section>
 </body>
+</html>

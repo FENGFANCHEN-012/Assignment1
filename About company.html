@@ -2,53 +2,341 @@
 <head>
     <title>    About Company</title>
       
-    
+    <style>
+        .fonti{
+            margin-top:15vw;font-weight:800;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+        }
+        .containerx {
+           
+            position: relative;
+            width: 50vw;
+            height: 50vw;
+          
+        }
+
+        .center-value {
+            background-color: rgb(155, 201, 223);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 15vw;
+            height: 15vw;
+            background-color: s;
+            color: rgb(227, 239, 236);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2vw;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-ball {
+            position: absolute;
+            width: 10vw;
+            height: 10vw;
+            background-color: #7da9c9; 
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5vw;
+            font-weight: bold;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            cursor: pointer;
+        }
+
+        
+        .value-ball:hover {
+            transform: scale(1.3);
+            background-color: #00796b; 
+        }
+
+        
+        .value1 { top: 10%; left: 50%; transform: translate(-50%, 0); }
+        .value2 { top: 50%; left: 90%; transform: translate(-50%, -50%); }
+        .value3 { bottom: 10%; left: 50%; transform: translate(-50%, 0); }
+        .value4 { top: 50%; left: 10%; transform: translate(-50%, -50%); }
+
+        .value-detail {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            text-shadow: #293746;
+           
+          font-weight: 500;
+          font-variant: small-caps;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            text-align: center;
+            color: #c4fde6;
+            font-size: 2vw;
+            width: 30vw;
+        }
+
+        .value-ball:hover + .value-detail {
+            opacity: 1;
+        }
+        body {
+            
+            
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        .history-section {
+            width: 90%;
+            margin: 40px ;
+            padding: 2vw;
+            overflow: scroll;
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+            border-radius: 1vw;
+        }
+       
+        
+        .history-wrapper {
+            
+            display: flex;
+            overflow-x:auto; 
+            scroll-snap-type: x mandatory;
+            overflow: auto;
+            
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 10px;
+            
+            width:150vw
+        }
+
+        .history-card {
+          
+            width: 30vw;
+            margin-right: 3vw;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 2vw;
+            text-align: center;
+            scroll-snap-align: start; 
+        }
+
+        .history-card h3 {
+            color: #2c3e50;
+            font-size: 1.5vw;
+            margin-bottom: 15px;
+        }
+
+        .history-card p {
+            color: #34495e;
+            font-size: 1.3vw;
+            line-height: 1.6;
+        }
+
+        .history-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .history-wrapper {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .history-card {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
     <link href="homepage.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header class="header" style="height:35vw;background-image:url('pexels-francesco-ungaro-2325447.jpg');">
-        <section class="container" style="width:100%;height:10%" >
-         <section class="item1" style="font-size:2vw">HAISEN</section>
-         <section class="item2">Flourishing our life together<img src=""> </section>  
-     
-         <section class="container1"><button onclick="open()"></button>Navigate</section>
-         <section style="margin-left:65vw">Search</section>
+    <header class="header" style="height:35vw;background-image:url('picture\\pexels-didsss-3160075.jpg');background-size:cover">
+        <section class="container" style="width:100%;" >
+         <section class="item1" style="font-size:2vw"><a href="HomePage.html">HAISEN</a></section>
+         <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
+         <section class="item2"><a href=Innovation.html>Innovation</a></section>
+         <section class="item2"><a href=CompanyService.html>Company Service</a></section>
+         <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+         <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
          </section>
-         <hr style="margin-top:0">
-         <section class="Ccontainer">
-             <section class="item1" style="margin-top:9vw"  >Company Service</section>
-        </header>
+         <section class="intro" >About Us</section>
+        </header>     
 
 
 
 <h1>Company History</h1>
-<section class="background2" >
-   <section>
-    ssd
-   </section>
-    <
 
-</section>
+   
+    <div class="history-section" style="background-image:url(picture\\pexels-pixabay-290595.jpg)">
+        <h2>Timeline of Our Journey</h2>
+        <div class="history-wrapper">
+        
+            <div class="history-card">
+                <img src="picture\\pexels-suzyhazelwood-3819390.jpg" alt="Year 1990">
+                <h3>1990: The Beginning</h3>
+                <p>Our company was founded with the vision to innovate in the healthcare sector. We started with a small team and a big dream.</p>
+            </div>
+           
+            <div class="history-card">
+                <img src="picture\pexels-scottwebb-136413.jpg" alt="Year 2000">
+                <h3>2000: Expansion</h3>
+                <p>We expanded our operations to new regions, providing healthcare solutions to a broader audience and making a significant impact.</p>
+            </div>
+    
+    
+            <div class="history-card">
+                <img src="picture\pexels-athena-2582937.jpg" alt="Year 2010">
+                <h3>2010: Technological Innovation</h3>
+                <p>With advancements in technology, we introduced new diagnostic devices that revolutionized the healthcare industry.</p>
+            </div>
+    
+          
+            <div class="history-card">
+                <img src="picture\pexels-andrew-2859169.jpg" alt="Year 2020">
+                <h3>2020: Global Presence</h3>
+                <p>Our company expanded globally, becoming a leader in healthcare innovation with a wide range of medical devices used worldwide.</p>
+            </div>
+    
+           
+            <div class="history-card">
+                <img src="picture\pexels-gabby-k-6238120.jpg" alt="Year 2024">
+                <h3>2024: A Bright Future</h3>
+                <p>Continuing our legacy, we strive for a healthier world with cutting-edge medical technology and sustainable practices.</p>
+            </div>
+        </div>
+    </div>
+
+
 <h1>Company Value</h1>
-<section class="background2" style="height:50vw">
+<div class="history-section" style="background-image:url(picture\\pexels-pixabay-290595.jpg);">
 
+ 
+    <div class="containerx" >
+        
+        <div class="center-value">Core Value</div>
 
+       
+        <div class="value-ball value1">Innovation</div>
+        <div class="value-detail" style="top: 20%;  transform: translate(35%, 8%);">Pioneering new ideas and solutions.</div>
 
-</section>
+        <div class="value-ball value2">Integrity</div>
+        <div class="value-detail" style="right: 0; top: 50%; transform: translate(10vw, -6vw)">Acting with honesty and transparency.</div>
+
+        <div class="value-ball value3">Customer</div>
+        <div class="value-detail" style="top: 80%;transform: translate(38%, 0%)">Focusing on customer satisfaction and needs.</div>
+
+        <div class="value-ball value4">Excellence</div>
+        <div class="value-detail" style="left: 0; top: 50%;transform: translate(5vw, -13vw);width:3vw">Striving for outstanding performance.</div>
+    </div>
+   
+
+</div>
 
 <h1>
     Company Scope
 </h1>
-
-<section class="background2" >
-
-
-
-</section>
-<section class="footer">
-
+<div class="history-section">
     
+    <div class="history-wrapper " style="width:300vw">
+    
+        <div class="history-card" style="width:100%;background-size:cover;background-position:center;background-image:url(picture\\pexels-karolina-grabowska-5632330.jpg)">
+            
+            <h3>Medical Sales</h3>
+            <div style="display:flex;justify-content:center;margin-top:15vw">
+            <p  class="fonti" style="margin-top:0; text-align:center;width:30%;">Delivering advanced medical equipment and pharmaceutical products to hospitals, clinics, and distributors worldwide.</p>
+        </div>
+        </div>
+       
+        <div class="history-card" style="width:100%;background-size:cover;background-position:center;background-image:url()">
+            
+            <h3>Medical Services</h3>
+            <div style="display:flex;justify-content:center;margin-top:15vw;">
+            <p  class="fonti" style="margin-top:0; text-align:center;width:30%;">Our medical services are dedicated to providing comprehensive, patient-centered care to ensure optimal health outcomes. We offer a full range of services, including general consultations, diagnostic testing, preventative care, and specialized treatments. With a team of highly skilled healthcare professionals and state-of-the-art facilities</p>
+        </div>
+        </div>
+
+        <div class="history-card" style="width:100%;background-size:cover;background-position:center;background-image:url(picture\\pexels-shvetsa-4421501.jpg)">
+            
+            <h3>Medical Device Services</h3>
+            <div style="display:flex;justify-content:center;margin-top:15vw">
+            <p  class="fonti" style="margin-top:0; text-align:center;width:30%;">Our medical device services are designed to support healthcare providers with cutting-edge technology and reliable solutions. We offer a wide range of medical devices, from diagnostic tools to advanced therapeutic equipment, ensuring the highest standards of quality and safety. In addition to supplying devices</p>
+        </div>
+        </div>
+
+
+      
+        </div>
+        </div>
+
+
+
+
 </section>
+<div class="footer">
+    <div class="container">
+       
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">Our Values</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="mailto:info@company.com">Email: info@company.com</a></li>
+                <li><a href="tel:+123456789">Phone: +1 234 567 89</a></li>
+                <li><a href="#">Office Locations</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+ 
+    <div style="margin-top: 3vw; font-size: 0.9vw; color: #7a7a7a;">
+        © 2024 Your Company. All rights reserved.
+    </div>
+</div>
+
 
     
 

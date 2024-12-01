@@ -8,7 +8,7 @@
 <body>
    <header class="header" style="height:35vw;background-image:url('picture\\4.jpg');">
    <section class="container" style="width:100%;" >
-    <section class="item1" style="font-size:2vw">HAISEN</section>
+    <section class="item1" style="font-size:2vw"><a href="HomePage.html">HAISEN</a></section>
     <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
     <section class="item2"><a href=Innovation.html>Innovation</a></section>
     <section class="item2"><a href=CompanyService.html>Company Service</a></section>
@@ -134,7 +134,7 @@
 </section>
 
 <section class="background2" style="height:50vw;margin-top:15vw;overflow:hidden">
-    <section class="container0">
+    <section class="container0" style="flex-shrink:0;width:100%" >
 
        
         <section class="item-intro">
@@ -143,11 +143,11 @@
             </div>
             <div class="item-details">
                 <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
-                <h2 class="item-title">Amazing Item</h2>
+                <h2 class="item-title">Blood Glucose Monitor</h2>
                 <p class="item-description">
-                    Discover the features of this amazing item! It is designed to make your life easier, more convenient, and more enjoyable.
+                    A blood glucose monitor is a portable device that allows individuals with diabetes to monitor their blood sugar levels anytime. By taking a small blood sample from a fingertip, the device provides accurate readings in seconds. Modern glucose meters also offer data storage and analysis features, helping patients manage their diet and treatment plan to control their blood sugar and prevent complications.
                 </p>
-                <button class="item-button">Learn More</button>
+                <button class="item-button" onclick=" window.location.href = 'blood.html'">Learn More</button>
             </div>
         </section>
 
@@ -160,11 +160,11 @@
 
             <div class="item-details">
                 <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
-                <h2 class="item-title">Amazing Item</h2>
+                <h2 class="item-title">Electrocardiogram (ECG) Machine</h2>
                 <p class="item-description">
-                    Discover the features of this amazing item! It is designed to make your life easier, more convenient, and more enjoyable.
+                    An Electrocardiogram (ECG) machine is a vital tool for monitoring heart health. It detects the electrical activity of the heart by placing electrodes on the skin, helping doctors diagnose heart conditions such as arrhythmias, heart attacks, and other cardiac abnormalities. Modern ECG machines offer high precision and rapid analysis, making them an essential diagnostic tool in healthcare.
                 </p>
-                <button class="item-button">Learn More</button>
+                <button class="item-button" onclick=" window.location.href = 'device.html'">Learn More</button>
             </div>
         </section>
 
@@ -174,11 +174,11 @@
             </div>
             <div class="item-details">
                 <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
-                <h2 class="item-title">Amazing Item</h2>
+                <h2 class="item-title">Ultrasound Diagnostic Machine</h2>
                 <p class="item-description">
-                    Discover the features of this amazing item! It is designed to make your life easier, more convenient, and more enjoyable.
+                    An ultrasound diagnostic machine uses high-frequency sound waves to non-invasively examine the internal structures of the body. It is widely used in pregnancy checks, organ scans, tumor detection, and more. Safe, with no radiation, it provides real-time images, offering doctors accurate diagnostic insights. Ultrasound has become a standard tool in hospitals worldwide.
                 </p>
-                <button class="item-button">Learn More</button>
+                <button class="item-button" onclick=" window.location.href = 'ultrasound.html'">Learn More</button>
             </div>
         </section>
         </section>
@@ -187,43 +187,7 @@
         
       
         
-        <script>
-           
-        const first = document.querySelector(".container0");
-        
-        
-        function appear(){
-            if (nav.style.display === "none" || nav.style.display === "") {
-                nav.style.display = "block";
-                show.textContent = "Back";
-            } else {
-                nav.style.display = "none";
-                show.textContent = "Menu"; 
-            }
-        }
-        
-        
-        const pages = Array.from(first.children);
-        let now = 0; 
-        
-        const time = 0;
-        for(const i =0;i<1000000;i++){
-            setTimeout(next,30000,1)
-        }
-        
-        function next(step) {
-          now += step; 
-        
-        
-          if (now >= pages.length) {
-            now = 0; 
-          } else if (now < 0) {
-            now = pages.length - 1; 
-          }
-        first.style.transform = `translateX(-${now * 33.5}%)`
-          
-        }
-        </script>
+       
         
 </section>
 <script>
@@ -263,7 +227,40 @@
 </script>
 
 
+<div class="footer">
+    <div class="container">
+       
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">Our Values</a></li>
+            </ul>
+        </div>
 
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="mailto:info@company.com">Email: info@company.com</a></li>
+                <li><a href="tel:+123456789">Phone: +1 234 567 89</a></li>
+                <li><a href="#">Office Locations</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+ 
+    <div style="margin-top: 3vw; font-size: 0.9vw; color: #7a7a7a;">
+        © 2024 Your Company. All rights reserved.
+    </div>
+</div>
     
 </section>
 </body>

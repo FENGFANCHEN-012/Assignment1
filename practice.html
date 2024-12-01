@@ -3,114 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle Panel</title>
+    <title>User Reflection Form</title>
     <style>
-        .product-list {
-            display: flex;
-            gap: 2vw;
-            flex-wrap: wrap;
-            justify-content: center;
+     
+
+        .container {
+            max-width: 50vw;
+            margin: 50px auto;
+            padding: 5vw;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
         }
 
-       
-        .product-card {
-            width: 15vw; 
-            height: 18vw; 
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 2vw; 
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        h2 {
+            font-size: 2vw;
+            color: #4e665e;
             text-align: center;
-            font-size: 1.5vw; 
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
-        .product-card .badge {
-            display: inline-block;
-            background-color: #f0f0ff;
+        .form-group {
+            margin-bottom: 1vw;
+        }
+
+        label {
+          
+            font-size: 1.1vw;
+            margin-bottom: 5px;
             color: #333;
-            font-size: 0.8em; 
-            padding: 2% 4%;
-            border-radius: 3px;
-            font-weight: bold;
-            margin-bottom: 3%;
         }
 
-        .product-card .product-image {
+        textarea, input {
             width: 100%;
-            height: auto;
-            border-radius: 5px;
-            margin-bottom: 5%; 
+            padding: 10px;
+            font-size: 1vw;
+            border: 0.1vw solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
         }
 
-        .product-card .product-title {
-            font-size: 1.5vw; 
+        textarea {
+            height: 25vw;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2em;
             font-weight: bold;
-            margin: 2% 0;
-            color: #333;
-        }
-
-        .product-card .product-price {
-            font-size: 2vw;
-            font-weight: bold;
-            color: #e63946;
-            margin-bottom: 2%;
-        }
-
-        .product-card .product-brand {
-            font-size: 1.2em; 
-            color: #aaa;
-            margin-bottom: 5%;
-        }
-
-        .product-card .product-rating {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1em;
-            color: #555;
-        }
-
-        .product-card .product-rating .rating-stars {
-            margin-right: 5px;
-        }
-
-        .product-card .cart-icon {
-            font-size: 2vw;
-            cursor: pointer;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            
             margin-top: 2vw;
         }
 
-       
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .thankyou-message {
+            display: none;
+            text-align: center;
+            margin-top: 3vw;
+            font-size: 1.5vw;
+            color: #77bd79;
+        }
     </style>
 </head>
 <body>
-    <section class="product-list"></section>
-    <section class="product-card">
-        
-        <div class="badge">BEST SELLER</div>
-    
-       
-        <img src="https://via.placeholder.com/200x150" alt="Product Image" class="product-image">
-    
-      
-        <h3 class="product-title">Vitamine</h3>
-        <p class="product-price">s</p>
-        
-    
-        
-        <div class="product-rating">
-            <span class="rating-stars">⭐ 4.9</span>
-            <span class="rating-count">(8)</span>
+    <div class="container">
+        <h2>Submit Your Reflection</h2>
+        <form id="reflectionForm">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder=" your name ?" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Your Reflection:</label>
+                <textarea id="feedback" name="feedback" placeholder="Write your feedback or reflection here..." required></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>   
+        <div class="thankyou-message" id="thankyouMessage">
+            Thank you for your reflection! We appreciate your feedback. 😊
+            <button class="submit-btn" onclick="location.href='Social responsibility.html'">Go Back</button>
         </div>
-    
-     
-        <div class="cart-icon">🛒</div>
-    </section>
+    </div>
+ <script>
+       
+        const form = document.getElementById('reflectionForm');
+        const thankYouMessage = document.getElementById('thankyouMessage');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            form.style.display = 'none';         thankYouMessage.style.display = 'block';
+        });
+    </script>
+
 </body>
 </html>
-

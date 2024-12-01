@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Join us </title>
+    <style>
+       
+
+        .container {
+            max-width: 60vw;
+            margin: 50px auto;
+            padding: 5vw;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        h2 {
+            font-size: 2vw;
+            color: #4e665e;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1vw;
+        }
+
+        label {
+          
+            font-size: 1.1vw;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            font-size: 1vw;
+            border: 0.1vw solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            height: 25vw;
+        }
+
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 15px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            border: none;
+            border-radius: 4px;
+            
+            margin-top: 2vw;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .thankyou-message {
+            display: none;
+            text-align: center;
+            margin-top: 3vw;
+            font-size: 1.5vw;
+            color: #77bd79;
+            height:30vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your Information</h2>
+        <form id="reflectionForm">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" placeholder=" " >
+            </div>
+            <div class="form-group">
+                <label for="name">Your email:</label>
+                <input type="text" id="name" name="name" placeholder="  " >
+            </div>
+            <div class="form-group">
+                <label for="name">Your country:</label>
+                <input type="text" id="name" name="name" placeholder=" " >
+            </div>
+            <div class="form-group">
+                <label for="name">Phone Num:</label>
+                <input type="text" id="name" name="name" placeholder="  " >
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>   
+        <div class="thankyou-message" id="thankyouMessage">
+            Thank you for Join us !
+            <div style="margin-top:2vw;height:25vw;background-size:cover;background-image:url(picture\\pexels-diohasbi-3280130.jpg)"></div>
+            <button class="submit-btn" onclick="location.href='Social responsibility.html'">Go Back</button>
+    </div>
+ <script>
+       
+        const form = document.getElementById('reflectionForm');
+        const thankYouMessage = document.getElementById('thankyouMessage');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            
+            form.style.display = 'none';         thankYouMessage.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

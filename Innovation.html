@@ -1,41 +1,369 @@
 <!DOCTYPE html>
 <head>
     <title>    About Company</title>
-      
+      <style>
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #004680;
+            color: white;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            opacity: 0.8;
+        }
+        
+  
+        .timeline {
+            position: relative;
+            margin: 5vw auto;
+            width: 80%;
+            padding: 1vw;
+        }
+        
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 2vw;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item.left {
+            right:5vw;
+            text-align: right;
+           
+        }
+        
+        .timeline-item.right {
+            left: 45vw;
+            text-align: left;
+           
+        }
+        
+       
+        .timeline:before {
+            content: "";
+            position: absolute;
+            
+            left: 50%;
+            width: 2px;
+            height: 100%;
+            background: #ccc;
+         
+        }
+        
+        .timeline-item .content {
+            background: rgb(201, 217, 239);
+            border-radius: 2vw;
+            padding: 2vw;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .timeline-item .content h3 {
+            margin:1vw;
+            font-size: 1.5vw;
+            color: #004680;
+            font-weight: 600;
+        }
+        
+        .timeline-item .content p {
+            margin: 10px 0;
+            font-size: 1em;
+            color: #666;
+            font-weight: 900;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        
+        .timeline-item .content img {
+            margin-top: 2vw;
+            width: 100%;
+            border-radius: 3vw;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+     
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            width: 1vw;
+            height: 1vw;
+            background: #004680;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px #ccc;
+        }
+        
+        .timeline-item.left:before {
+            right: -3vw;
+        }
+        
+        .timeline-item.right:before {
+            left: -3vw;
+        }
+        
+      </style>
     
     <link href="homepage.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <header class="header" style="height:35vw;background-image:url('pexels-francesco-ungaro-2325447.jpg');">
-        <section class="container" style="width:100%;height:10%" >
-         <section class="item1" style="font-size:2vw">HAISEN</section>
-         <section class="item2">Flourishing our life together<img src=""> </section>  
-     
-         <section class="container1"><button onclick="open()"></button>Navigate</section>
-         <section style="margin-left:65vw">Search</section>
-         </section>
-         <hr style="margin-top:0">
-         <section class="Ccontainer">
-             <section class="item1" style="margin-top:9vw"  >Company Service</section>
-        </header>
+    <header class="header" style="height:35vw;background-image:url('picture\\pexels-didsss-3160075.jpg');background-size:cover">
+        <section class="container" style="width:100%;" >
+         <section class="item1" style="font-size:2vw"><a href="HomePage.html">HAISEN</a></section>
+         <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
+         <section class="item2"><a href=Innovation.html>Innovation</a></section>
+         <section class="item2"><a href=CompanyService.html>Company Service</a></section>
+         <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+         <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+        </section>
+        <section class=""style="margin-left:20vw;margin-top:20vw">ABOUT COMPANY</section>
+        </header>    
 
 
 
 
-        
-<section class="background2" style="height:70vw">
+<section style="display:flex;justify-content:center">  
+<section class="background2" style="margin-top:10vw;width:90%;height:50vw;background-image:url(picture\\pexels-anytiffng-2097616.jpg);background-size:cover">
     <h1>Innovation Journey</h1>
+    <div class="timeline">
+      
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>2000 - Haisen Introduces Breakthrough Antiviral Therapy </h3>
+                <p>In 2002, Haisen Pharmaceutical launched its first FDA-approved antiviral drug, HIVBloc-1, targeting HIV treatment. The drug was celebrated for its novel mechanism, significantly reducing viral load in patients. This innovation placed Haisen on the global pharmaceutical map and laid the foundation for further antiviral research.</p>
+                <img src="https://via.placeholder.com/150" alt="2000 milestone">
+            </div>
+        </div>
+
+      
+        <div class="timeline-item right">
+            <div class="content">
+                <h3> 2008 - Haisen Pioneers a New Class of Diabetes Treatments</h3>
+                <p>Haisen revolutionized diabetes management with GlucoCare XR, a long-acting oral medication for Type 2 diabetes. Approved by regulatory bodies worldwide, the drug utilized cutting-edge SGLT-2 inhibitor technology, reducing blood sugar while lowering cardiovascular risks. This marked a turning point in diabetes care.</p>
+                <img src="https://via.placeholder.com/150" alt="2005 milestone">
+            </div>
+        </div>
+
+       
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>2015 - First Gene Therapy Approved for Rare Genetic Disorder</h3>
+                <p>In 2015, Haisen became a leader in genetic medicine by introducing GenCure-1, a gene therapy for Spinal Muscular Atrophy (SMA). This therapy, using viral vector technology, offered a one-time treatment, fundamentally altering the disease’s progression and improving patients' quality of life. It received orphan drug status and widespread acclaim.</p>
+                <img src="https://via.placeholder.com/150" alt="2010 milestone">
+            </div>
+        </div>
+
+       
+        <div class="timeline-item right">
+            <div class="content">
+                <h3> 2019 - Development of Precision Oncology Drug</h3>
+                <p>Haisen launched OncoTarget-X in 2019, a precision medicine targeting non-small cell lung cancer (NSCLC) with specific genetic mutations. This drug leveraged advanced biomarker identification and became a standard for personalized cancer treatments, improving survival rates for thousands of patients.</p>
+                <img src="https://via.placeholder.com/150" alt="2015 milestone">
+            </div>
+        </div>
+
+      
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>2021 - COVID-19 mRNA Vaccine Rollout</h3>
+                <p>Amid the global pandemic, Haisen successfully developed H-COVID-19-Vax, its first mRNA-based vaccine. The vaccine demonstrated over 90% efficacy in preventing severe COVID-19 and played a critical role in worldwide immunization campaigns. It also showcased the company’s expertise in mRNA technology, opening doors for future applications.</p>
+                <img src="https://via.placeholder.com/150" alt="2020 milestone">
+            </div>
+        </div>
+
+       
+        <div class="timeline-item right">
+            <div class="content">
+                <h3>Breakthrough Alzheimer’s Disease Therapy Launched</h3>
+                <p>In 2024, Haisen introduced NeuroRestore, the first drug proven to reverse early-stage Alzheimer’s disease. The therapy, based on a novel amyloid-clearing antibody, marked a paradigm shift in treating neurodegenerative diseases. It was heralded as one of the most significant medical achievements of the decade.</p>
+                <img src="https://via.placeholder.com/150" alt="2024 milestone">
+            </div>
+        </div>
+    </div>
 
 
 
 </section>
-<h1>Innovation Medicine</h1>
+</section>   
+
 <section class="background2" style="height:50vw">
-
-
-    <section class="footer">
-
+    <section style="width:100%;background-image:url(picture\\2.jpg);margin:2vw"><h1>Innovation Medicine</h1><p>Embrace healthy life </p></section>
     
+   
+  <section class="product-card" onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
     </section>
+  <section class="product-card"  onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
+    <section class="product-card" onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
+    <section class="product-card" onclick="select(this);window.location.href='product.html' ">
+        
+        <div class="badge">BEST SELLER</div>
+    
+       
+        <img style="width:15vw;height:15vw"src="https://via.placeholder.com/200x150" alt="Product Image"id="product-img" class="product-image">
+    
+      
+       
+        <h3 class="product-title" id="product-title">Vitamine</h3>
+        
+        
+        <p class="product-price" id="product-price">s</p>
+        
+    
+        
+        <div class="product-rating">
+            <span class="rating-stars">⭐ 4.9</span>
+            <span class="rating-count">(8)</span>
+        </div>
+    
+     
+        <div class="cart-icon">🛒</div>
+    </section>
+   </section>
+</section>
+<script>
+const productTitles = ["Penicillin", "Ceftriaxone", "Vitamins", "Fish Oil", "Bhruove","Penicillin", "erythromycin", "org vege oil", "ammon chlor drug"];
+const productImages = ["picture\\m1.png", "picture\\m2.png", "picture\\m3.png", "picture\\m4.png", "picture\\m5.png","picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png","picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png"];
+const set1=[["picture\\pexels-anna-nekrashevich-8533223-removebg-preview.png","picture\\pexels-binoid-cbd-1990665-3612182-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png","picture\\pexels-eva-bronzini-6914588-removebg-preview.png","picture\\pexels-fotios-photos-2552417-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png"],
+["picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-karolina-grabowska-4040566-removebg-preview.png","picture\\pexels-karolina-grabowska-4046999-removebg-preview.png","picture\\pexels-karolina-grabowska-4047146-removebg-preview.png","picture\\pexels-karolina-grabowska-4210611-removebg-preview.png","picture\\pexels-mccutcheon-3676962-removebg-preview.png"],
+["picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-n-voitkevich-7526022-removebg-preview.png","picture\\pexels-n-voitkevich-7615460-removebg-preview.png","picture\pexels-n-voitkevich-7615463-removebg-preview.png","picture\pexels-n-voitkevich-7615608-removebg-preview.png","picture\pexels-n-voitkevich-7852729-removebg-preview.png"]]
+
+
+
+const prices = document.getElementsByClassName("product-price");
+const titles = document.getElementsByClassName("product-title");
+const images = document.getElementsByClassName("product-image");
+
+used=[]
+for (let i = 0; i < prices.length; i++) {
+    const randomPrice = (Math.random() * 100).toFixed(2); 
+    let randomIndex ;
+    do {
+        randomIndex = Math.floor(Math.random() * productTitles.length);
+    } while (used.includes(randomIndex)); 
+    
+    prices[i].innerHTML = `$${randomPrice}`;
+    titles[i].innerHTML = productTitles[randomIndex];
+    images[i].src = productImages[randomIndex];
+    used.push(randomIndex)
+}
+function select(item){
+   
+    const itemTitle = item.querySelector("#product-title").innerText;
+    const itemprice = item.querySelector("#product-price").innerText;
+
+    localStorage.setItem("selectedItem", itemTitle)
+    localStorage.setItem("selectedItem2", itemprice)
+}
+</script>
+
+<div class="footer">
+    <div class="container">
+       
+        <div class="footer-section">
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">Our Values</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="mailto:info@company.com">Email: info@company.com</a></li>
+                <li><a href="tel:+123456789">Phone: +1 234 567 89</a></li>
+                <li><a href="#">Office Locations</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
+    </div>
+ 
+    <div style="margin-top: 3vw; font-size: 0.9vw; color: #7a7a7a;">
+        © 2024 Your Company. All rights reserved.
+    </div>
+</div>
 </section>
 </body>

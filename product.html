@@ -3,8 +3,11 @@
     <title>About Company</title>
     <link href="homepage.css" rel="stylesheet" type="text/css">
     <style>
+
+        
         body{
             background-color: rgba(216, 218, 218, 0.71);
+           
         }
         h1{color:rgb(71, 109, 71);font-weight: 600;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
         h2{color:rgb(71, 109, 71);font-weight: 600;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif}
@@ -58,46 +61,117 @@
             background-color: #45a049;
         }
         .doctor-advice {
-            justify-content: start;
-            background-color:rgba(216, 218, 218, 0.71);padding:2vw;margin-left:0;
-            width:99%; margin-top:3vw;
+            display: flex;
+            align-items: flex-start;
+            background-color: #e0e8e4; /* 灰绿色背景 */
             border-radius: 10px;
-            padding: 2vw 4vw;
-            align-items: start;
-            width: 90vw;
-            min-height: 20vh;
-            margin: 2vh auto;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 专业的阴影效果 */
         }
         
-        .doctor-advice h2 {
-            color: #2c3e50;
-            font-size: 4vw;
-            margin-bottom: 1vw;
+        .doctor-image {
+            flex: 0 0 20%; /* 左侧图片占20%宽度 */
+            margin-right: 20px;
         }
         
-        .doctor-advice p {
-            color: #34495e;
-            font-size: 2.5vw;
-            margin-bottom: 3vw;
+        .doctor-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* 圆角图片 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 图片阴影 */
         }
         
-        .doctor-advice ul {
-            list-style-type: none;
-            padding: 0;
+        .advice-content {
+            flex: 1; /* 内容占剩余宽度 */
         }
         
-        .doctor-advice ul li {
-            color: #16a085;
-            font-size: 2vw;
-            margin-bottom: 1vw;
+        .advice-content h2 {
+            font-size: 2rem; /* 标题字体大小 */
+            color: #2c3e50; /* 深绿色标题 */
+            margin-bottom: 15px;
+            font-family: 'Arial', sans-serif; /* 专业字体 */
+        }
+        
+        .advice-content ul {
+            list-style-type: disc;
+            margin: 0;
+            padding: 0 20px;
+            color: #34495e; /* 灰绿色文字 */
+            font-size: 1.2rem;
+            font-family: 'Arial', sans-serif; /* 专业字体 */
+            line-height: 1.8;
+        }
+        
+        .advice-content ul li {
+            margin-bottom: 10px;
+        }
+        .our-promise {
+            background-color: #e0e8e4; /* 灰绿色背景 */
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 专业的阴影效果 */
+            text-align: center;
+        }
+        
+        .our-promise h2 {
+            font-size: 2rem; /* 标题字体大小 */
+            color: #2c3e50; /* 深绿色标题 */
+            margin-bottom: 20px;
+            font-family: 'Arial', sans-serif; /* 专业字体 */
+        }
+        
+        .promise-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-between;
+        }
+        
+        .promise-item {
+            background-color: white; /* 白色卡片背景 */
+            border-radius: 10px;
+            padding: 15px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 30%;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 卡片阴影 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .promise-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            border-radius: 50%; /* 圆形图片 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 图片阴影 */
+        }
+        
+        .promise-content h3 {
+            font-size: 1.5rem;
+            color: #2c3e50; /* 深绿色标题 */
+            margin-bottom: 10px;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        .promise-content p {
+            font-size: 1rem;
+            color: #34495e; /* 灰绿色文字 */
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
         }
     </style>
 </head>
 <body>
-    <header class="header" style="height:70vw;width:96%;padding:1vw">
+    <header class="header" style="height:70vw;width:100%;padding:1vw">
         <section class="container" style="width:100%;" >
-            <section class="item1" style="font-size:2vw">HAISEN</section>
+            <section class="item1" style="font-size:2vw"><a href="HomePage.html">HAISEN</a></section>
             <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
             <section class="item2"><a href="Innovation.html">Innovation</a></section>
             <section class="item2"><a href="CompanyService.html">Company Service</a></section>
@@ -106,8 +180,8 @@
         </section>
 
         <section class="container0" style="height:70vw;;justify-content:start;background-color:rgba(216, 218, 218, 0.71)"  >
-            <section class="item-intro" style="height:70vw;background-color:rgba(216, 218, 218, 0.71);width:90%">
-                <div class="item-image" style="flex-direction:column;width:86%;justify-content:start;overflow:scroll">
+            <section class="item-intro" style="height:70vw;background-color:rgba(216, 218, 218, 0.71);width:100%">
+                <div class="item-image" style="flex-direction:column;width:50%;justify-content:start;overflow:scroll">
                     <section style="display:flex;justify-content:start;gap:1vw">
                         <img id="1" style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image ">
                         <img id="2" style="width:35vw;height:30vw;border:0.4vw solid rgb(101, 114, 105)"src="https://via.placeholder.com/350" alt="Item Image">
@@ -123,7 +197,7 @@
                     </section>
                 </div>
 
-                <div class="product-card" style="width:40%;height:70vw;margin:0;display:flex;justify-content:start;transform:none">
+                <div class="product-card" style="background-image:url('picture\\pexels-element5-1470171.jpg'); width:40%;height:70vw;margin:0;display:flex;justify-content:start;transform:none;">
                     <div class="rating" style="justify-content:start;display:flex;color:rgb(71, 109, 71)">
                         <span>⭐ 4.6</span> <span class="rating-count">(97)</span>
                     </div>
@@ -142,76 +216,52 @@
                     <h4 style="justify-content:start;display:flex;">Quantity:
                         <input type="number" id="quantity" name="quantity" min="1" max="100" value="1" required >
                     </h4>
-                    <div style="justify-content:start;display:flex">
-                    </div>
+                   
                     <h4 style="justify-content:start;display:flex;">Serving Size Checking: <button id="showmore" style="width:25%;font-size:1.2vw;color:rgb(33, 40, 38);border-radius:30vw;border:none ;background-color:white">▼</button></h4>
                     <hr>
-                    <div id="hide" style="height:10vw">
-                        <form id="checking">
+                   
+                    <form id="checking" style="height:10vw">
+                    
                     <section style="width:100%;text-align:left;background-color:#ccdcce;padding:0.2vw">
                     <h5 style="height:1vw">Your age:    <input type="number"  name="age" min="1" max="100" value="1" required style="height:1vw;margin-top:0";></h5>
                     <h5 style="height:1vw;">Your weight (kg):    <input type="number"  name="kg"  max="100"  required style="height:1vw;margin-top:0;width:5vw";></h5>
                     <h5 style="height:1vw">Your Sex:   <label>Male</label><input type="radio"  name="sex"  required style="height:1vw;margin-top:0";><label>Female</label><input type="radio"  name="sex"  required style="height:1vw;margin-top:0";></h5>
-                    <button class="deep-green-btn"type="subimit" >Check result</button>
+                 
+                    <button type="submit"class="deep-green-btn" id="sub" >Check result</button>
+                    </section>
                     </form>
-                </section>
-                
-                </div>
-                  <script>
-                    const jj=document.getElementById("checking")
-                    jj.addEventListener("submit",function(){
-                        const s = jj.elements['age'].value
-                        const k = jj.elements['sex'].value
-                        const m=jj.elements['kg'].value
-                        const suggest = document.getElementById("")
-                        const result=0
-                        if(s<=50&&s>=30&&m>=70 || (s>=20&& 15>=m && m>=10)){
-                            result =m*0.3
-                        }
-                       
-                        
-                        else{
-                            result=m*0.2
-                        }
-
-                    })
-                  </script>
-                   
-              
-            
-                        
-
+                    
+                        <div  class="item-button" style="margin-top:9vw"> Add To The Chart </div>
+                    
                   
-
-                    <div style="justify-content:start;display:flex">
-                    </div>
-
-                    <p class="item-description">
-                       <button type="submit" class="item-button" style="margin-top:7vw"> Add To The Chart </button>
+            
+               
+                </div>
+                       
                         <script>
                             const j = document.getElementsByClassName("item-button")
                           
-                            const hi = document.getElementById("hide")
+                            const hi = document.getElementById("checking")
                             const show = document.getElementById("showmore")
                             hi.style.display='none'
-                            show.addEventListener("click",function(){
+                            show.addEventListener("click", function() {
                                 if (hi.style.display === 'none' || hi.style.display === '') {
                                     hi.style.display = 'block';
-                                    show.innerHTML = '▲'; }
-                               
-                               else{     hi.style.display = 'none'; 
-                                    show.textContent = '▼'; }
+                                    show.innerHTML = '▲';
+                                } else {
+                                    hi.style.display = 'none';
+                                    show.textContent = '▼';
                                 }
-                            )
+                            });
                         </script>
-                    </p>
-                    </form>
+                    
+                   
                 </div>
             </section>
         </section>
     </header>
 
-    <div class="background-product" style="height:40vw">
+    <div class="background-product" style="height:40vw;background-position:center;background-size:cover;background-image:url(picture\\pexels-element5-1470171.jpg)">
         <h3 class="more-products">More Products</h3>
         <ul id="container" style="margin-left:4vw" >
             <li class="longsection" >
@@ -297,71 +347,150 @@
                 </section>
             </li>
            
-            </li>
-        </ul>
-    </div>
-    <div class="background-product" style="height:32vw">
-        <h2 style="margin-bottom:4vw;text-align:left">OUR PROMISE</h2>
-        <div style="margin-bottom: 20px;">
-
-            <div class="box">
-                <div class="Ccontainer" style="margin-bottom:2vw">
-                    <img src="" width="100vw"  alt="ssdsd"height="100vw">
-                <div>
-                <h3 style="font-size: 2vw; margin: 0;">Exceptional Quality</h3>
-               
-                <h4 style="margin: 0; color: #333;">We ensure every product meets the highest standards of craftsmanship and excellence.</4>
-                </div>
-        </div>
-
-
-        <div style="margin-bottom: 20px;">
-            <div class="box">
-                <div class="Ccontainer" style="margin-bottom:2vw">
-                    <img src="" width="100vw"  alt="ssdsd"height="100vw">
-                <div>
-                <h3 style="font-size: 2vw; margin: 0;">Exceptional Quality</h3>
-               
-                <h4 style="margin: 0; color: #333;">We ensure every product meets the highest standards of craftsmanship and excellence.</4>
-                </div>
-        </div>
-
-
-        <div style="margin-bottom: 20px;">
-            <div class="box">
-                <div class="Ccontainer" style="margin-bottom:2vw">
-                    <img src="" width="100vw"  alt="ssdsd"height="100vw">
-                <div>
-                <h3 style="font-size: 2vw; margin: 0;">Exceptional Quality</h3>
-               
-                <h4 style="margin: 0; color: #333;">We ensure every product meets the highest standards of craftsmanship and excellence.</4>
-                </div>
-        </div>
-
-            </div>
-           
-        </div>
-        
-
-    </div>
-
-
-
-
-    <div class="doctor-advice">
-        <h2></h2>
-        <p></p>
-        <ul>
-        <li>asdasd</li>
             
         </ul>
     </div>
+
+
+
+    <section style="width:100%;padding:2vw;margin-top:7vw;background-size:cover;background-image:url(picture\\pexels-midhun-bs-381216-1044320.jpg)">
+        <div class="our-promise">
+            <h2>Our Promise</h2>
+            <div class="promise-list">
+                <div class="promise-item">
+                    <img src="https://via.placeholder.com/150" alt="Exceptional Quality">
+                    <div class="promise-content">
+                        <h3>Exceptional Quality</h3>
+                        <p>We ensure every product meets the highest standards of quality and craftsmanship, giving you the best possible experience.</p>
+                    </div>
+                </div>
+                <div class="promise-item">
+                    <img src="https://via.placeholder.com/150" alt="Sustainability">
+                    <div class="promise-content">
+                        <h3>Sustainability</h3>
+                        <p>We are committed to sustainable practices, ensuring minimal environmental impact while maximizing societal benefits.</p>
+                    </div>
+                </div>
+                <div class="promise-item">
+                    <img src="https://via.placeholder.com/150" alt="Trusted Support">
+                    <div class="promise-content">
+                        <h3>Trusted Support</h3>
+                        <p>Our team of professionals is always available to provide expert guidance and support, ensuring customer satisfaction.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+            
+           
+        
         
 
+    
+
+
+
+
+   
+        <div class="doctor-advice" style="margin-top:4vw">
+            <div class="doctor-image">
+                <img src="https://via.placeholder.com/150" alt="Doctor's Photo">
+            </div>
+            <div class="advice-content">
+                <div>
+                    <h2>Your Daily serving size should be:</h3>
+                    <p id="serve"></p>
+                </div>
+                <h2>Professional Advice</h2>
+                <ul>
+                    <li>Engage in at least 30 minutes of physical activity every day, such as walking or yoga.</li>
+                    <li>Eat a balanced diet rich in fiber, protein, and vitamins, and limit processed foods.</li>
+                    <li>Stay hydrated by drinking 2 liters of water daily.</li>
+                    <li>Get regular check-ups to maintain physical and mental health.</li>
+                    <li>Maintain a consistent sleep schedule with 7-8 hours of quality rest.</li>
+                </ul>
+               
+            </div>
+
+        
+            <script>
+                const form = document.getElementById("checking");
+                const submitButton = document.getElementById("sub");
+                const resultElement = document.getElementById("serve");
+
+
+submitButton.addEventListener("click", function () {
+event.preventDefault();
+const age = form.elements['age'].value;
+const weight = form.elements['kg'].value;
+const sexInputs = form.elements['sex'].value;
+if (!age || !weight || !sex) {
+    alert("Please fill out all fields.");
+    
+}
+else{
+let result = 0;
+
+
+if ((age <= 50 && age >= 30 && weight >= 70) || (age >= 20 && weight >= 10 && weight <= 15)) {
+    result = weight * 0.3;
+} else {
+    result = weight * 0.2;
+}
+
+
+resultElement.innerHTML = `${result} g / day`;
+resultElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+});
+                
+                
+
+              </script> 
+    
+        </section>
+</section>
+   
+<footer class="footer">
+    <div class="container">
+        <div>
+            <h4>About Us</h4>
+            <ul>
+                <li><a href="#">Company Overview</a></li>
+                <li><a href="#">Our Mission</a></li>
+                <li><a href="#">Careers</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Contact Us</h4>
+            <ul>
+                <li><a href="#">Email Us</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Locations</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h4>Follow Us</h4>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Instagram</a></li>
+            </ul>
+        </div>
     </div>
+
+    <div>
+        <p>&copy; 2024 Company Name. All rights reserved.</p>
+    </div>
+</footer>
+</div>
     
-    
-    <div class="footer"></div>
+
     <script>
         const selectedItem = localStorage.getItem("selectedItem");
         const selectedItem2 = localStorage.getItem("selectedItem2");
