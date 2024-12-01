@@ -168,114 +168,12 @@
         <button class="custom-button" onclick="location.href='CompanyService.html'">
             Explore More
         </button>
-    
-    
     </section >
     </div>
-
 </section>
 </header>
-
-<script>
-   
-const first = document.querySelector(".container0");
-
-
-function appear(){
-    if (nav.style.display === "none" || nav.style.display === "") {
-        nav.style.display = "block";
-        show.textContent = "Back";
-    } else {
-        nav.style.display = "none";
-        show.textContent = "Menu"; 
-    }
-}
-
-
-const pages = Array.from(first.children);
-let now = 0; 
-
-const time = 0;
-
-
-function next(step) {
-
-
-  now += step; 
-
-
-  if (now >= pages.length) {
-    now = 0; 
-  } else if (now < 0) {
-    now = pages.length - 1; 
-  }
-first.style.transform = `translateX(-${now * 101}%)`
-  
-}
-
-
-
-const searchData = [
-    { name: "Market Strategy", link: "Market strategy.html" },
-    { name: "About Company", link: "About company.html" },
-    { name: "Innovation", link: "Innovation.html" },
-    { name: "Company Service", link: "Company service.html" },
-    { name: "Our Responsibility", link: "Social responsibility.html" }
-];
-
-
-function filterResults() {
-    const input = document.getElementById("search-input").value.toLowerCase().trim(); 
-    const resultsContainer = document.getElementById("search-results");
-
-  
-    resultsContainer.innerHTML = null;
-
-    if (input) {
-      
-        const filteredResults = searchData.filter(item =>
-            item.name.toLowerCase().startsWith(input)
-        );
-
-        if (filteredResults.length > 0) {
-            resultsContainer.style.display = "block"; 
-            filteredResults.forEach(item => {
-                const resultElement = document.createElement("p");
-                resultElement.innerHTML = item.name;
-                resultElement.onclick = () => location.href = item.link; 
-                resultsContainer.appendChild(resultElement);
-            });
-        } else {
-            resultsContainer.style.display = "block"; 
-            resultsContainer.innerHTML = "<p>No results found.</p>";
-        }
-    } else {
-        resultsContainer.style.display = "none"; 
-    }
-}
-
-
-function performSearch() {
-    const input = document.getElementById("search-input").value.toLowerCase().trim(); 
-    const matchingItem = searchData.find(item =>
-        item.name.toLowerCase().startsWith(input) 
-    );
-
-    if (matchingItem) {
-        location.href = matchingItem.link; 
-    } else {
-        alert("No matching results found!");
-    }
-}
-
-
-
-</script>
-
-
 <hr>
-
-<h1 style="margin-top:10vw">About Company</h1>
+<h1 style="margin-top:10vw">About Company</h1>    <!--About company-->
 <section style="background-position:center;background-size:cover;background-image:url(picture\\pexels-sevenstormphotography-443383.jpg)">
     
     <section style="display:flex;align-items:center;margin-top:1vw;padding:0vw;height:50vw">
@@ -344,45 +242,8 @@ function performSearch() {
     </section>
 </section>
 </section>
-    <script>
-      
-        const trace = document.querySelector('#container2');
-        const slide = Array.from(trace.children);
-        const slideWid = slide[0].getBoundingClientRect().width;
-        var current=0;
-        
-       
-         const widthPercentage = (elementWidth / windowWidth) * 100;
-        function Slide(index) {
-            const element = document.querySelector('#container2');
-        const elementWidth = element.offsetWidth; 
-        const windowWidth = window.innerWidth; 
-        const widthPercentage = (((elementWidth) / windowWidth) * 100);
-
-            
-            if (current === 0) {
-               
-                current = index;
-                trace.style.transform = `translateX(-${(widthPercentage) * current}vw)`;
-            } else if (current > index) {
-               
-                trace.style.transform = `translateX(-${(widthPercentage) * index}vw)`;
-                current = index; 
-            } else if (current < index) {
-                
-                trace.style.transform = `translateX(-${(widthPercentage) * index}vw)`;
-                current = index; 
-            }
-        }
-        
-
-    </script>
 </section>
 
-
-
-
-   
 <section style="display:flex;align-items:center;margin-top:10vw;padding:0vw;height:40vw;background-position:center;background-size:cover;background-image:url(picture\\pexels-googledeepmind-18069157.jpg)">
     <h1  style="margin-top:vw">Company Service</h1>
     <div class="longcontainer">
@@ -479,7 +340,7 @@ function performSearch() {
     </script>
 </section>
 
-<h1 style="margin-top:25vw;">Market Strategy</h1>   <!--first-->
+<h1 style="margin-top:25vw;">Market Strategy</h1>   <!--Market strategy-->
 <section class="background"  style="width:100%;display:flex;align-items:center;justify-content:center;background-color:#f7f3f3a2">
        
     <div id="container2" style="background-size:cover;background-image:url('picture\\pexels-pixabay-260024.jpg')">
@@ -564,12 +425,10 @@ function performSearch() {
 </script> 
 
 
-    <h1 style="margin-top:20vw">Social Responsibility</h1>   <!--first-->
+    <h1 style="margin-top:20vw">Social Responsibility</h1>   <!--Social responsibilty-->
   
-    <section class="background"  style="width:100%;display:flex;align-items:center;justify-content:center;background-color:#f7f3f3a2">
-       
+    <section class="background"  style="width:100%;display:flex;align-items:center;justify-content:center;background-color:#f7f3f3a2">     
         <div id="container2" style="background-position:center;background-size:cover;background-image:url(picture\\pexels-mikhail-nilov-7682200.jpg)">
-          
               <section class="section" id="section1" style="width:100%; height:100%;  margin-top:38vw;">
                   <div class="section-content" style="color:black;font-weight:900">
                       <h2>Responsibility not just a word</h2>
@@ -580,19 +439,9 @@ function performSearch() {
                   
                   </div>
               </section>
-                 
-              
-         
           </div>
-    
           </section>
-    
-
-
-
-
-
-    <div class="footer">
+    <div class="footer">                      <!--footer-->
         <div class="container">
            
             <div class="footer-section">
@@ -662,5 +511,132 @@ function performSearch() {
             localStorage.setItem("selectedItem2", itemprice)
         }
     </script>
+    <script>
+   
+        const first = document.querySelector(".container0");
+        
+        
+        function appear(){
+            if (nav.style.display === "none" || nav.style.display === "") {
+                nav.style.display = "block";
+                show.textContent = "Back";
+            } else {
+                nav.style.display = "none";
+                show.textContent = "Menu"; 
+            }
+        }
+
+        const pages = Array.from(first.children);
+        let now = 0; 
+        
+        const time = 0;
+        
+        
+        function next(step) {
+        
+        
+          now += step; 
+        
+        
+          if (now >= pages.length) {
+            now = 0; 
+          } else if (now < 0) {
+            now = pages.length - 1; 
+          }
+        first.style.transform = `translateX(-${now * 101}%)`
+          
+        }
+        
+        
+        
+        const searchData = [
+            { name: "Market Strategy", link: "Market strategy.html" },
+            { name: "About Company", link: "About company.html" },
+            { name: "Innovation", link: "Innovation.html" },
+            { name: "Company Service", link: "Company service.html" },
+            { name: "Our Responsibility", link: "Social responsibility.html" }
+        ];
+        
+        
+        function filterResults() {
+            const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+            const resultsContainer = document.getElementById("search-results");
+        
+          
+            resultsContainer.innerHTML = null;
+        
+            if (input) {
+              
+                const filteredResults = searchData.filter(item =>
+                    item.name.toLowerCase().startsWith(input)
+                );
+        
+                if (filteredResults.length > 0) {
+                    resultsContainer.style.display = "block"; 
+                    filteredResults.forEach(item => {
+                        const resultElement = document.createElement("p");
+                        resultElement.innerHTML = item.name;
+                        resultElement.onclick = () => location.href = item.link; 
+                        resultsContainer.appendChild(resultElement);
+                    });
+                } else {
+                    resultsContainer.style.display = "block"; 
+                    resultsContainer.innerHTML = "<p>No results found.</p>";
+                }
+            } else {
+                resultsContainer.style.display = "none"; 
+            }
+        }
+        
+        
+        function performSearch() {
+            const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+            const matchingItem = searchData.find(item =>
+                item.name.toLowerCase().startsWith(input) 
+            );
+        
+            if (matchingItem) {
+                location.href = matchingItem.link; 
+            } else {
+                alert("No matching results found!");
+            }
+        }
+        
+        
+        
+        </script>
+        <script>
+              
+            const trace = document.querySelector('#container2');
+            const slide = Array.from(trace.children);
+            const slideWid = slide[0].getBoundingClientRect().width;
+            var current=0;
+            
+           
+             const widthPercentage = (elementWidth / windowWidth) * 100;
+            function Slide(index) {
+                const element = document.querySelector('#container2');
+            const elementWidth = element.offsetWidth; 
+            const windowWidth = window.innerWidth; 
+            const widthPercentage = (((elementWidth) / windowWidth) * 100);
+        
+                
+                if (current === 0) {
+                   
+                    current = index;
+                    trace.style.transform = `translateX(-${(widthPercentage) * current}vw)`;
+                } else if (current > index) {
+                   
+                    trace.style.transform = `translateX(-${(widthPercentage) * index}vw)`;
+                    current = index; 
+                } else if (current < index) {
+                    
+                    trace.style.transform = `translateX(-${(widthPercentage) * index}vw)`;
+                    current = index; 
+                }
+            }
+            
+        
+        </script>
 </body>
 </html>

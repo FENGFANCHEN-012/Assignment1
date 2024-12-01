@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <head>
     <title>    About Company</title>
-      
-    
+
     <link href="homepage.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -29,83 +28,10 @@
          <section class="intro" >Our Service</section>
          
         </header> 
-        <script>
-            const searchData = [ { name: "Penicillin", link: "product.html" },
-            { name: "Ceftriaxone", link: "product.html" },
-            { name: "Vitamins", link: "product.html" },
-            { name: "Fish Oil", link: "product.html" },
-            { name: "Bhruove", link: "product.html" },
-            { name: "erythromycin", link: "product.html" },
-            { name: "org vege oil", link: "product.html" },
-            { name: "ammon chlor drug", link: "product.html" }
-  
-];
-const input = document.getElementById("search-input").value.toLowerCase().trim(); 
-const resultsContainer = document.getElementById("search-results");
-resultsContainer.style.display="none"
-function filterResults() {
-  
-
-  
-    resultsContainer.innerHTML = "";
-     
-    
-      
-        const filteredResults = searchData.filter(item =>
-            item.name.toLowerCase().startsWith(input)
-        );
-
-        if (filteredResults.length > 0) {
-            resultsContainer.style.display = "block"; 
-            filteredResults.forEach(item => {
-                const resultElement = document.createElement("p");
-                resultElement.innerHTML = item.name;
-                resultElement.onclick = () => location.href = item.link; 
-                resultsContainer.appendChild(resultElement);
-            })
-        } 
-       
-    
-       else {
-        resultsContainer.innerHTML = "none"; 
-        resultsContainer.style.display= "none";
-    }}
-
-
-
-function performSearch() {
-    const input = document.getElementById("search-input").value.toLowerCase().trim(); 
-    const matchingItem = searchData.find(item =>
-        item.name.toLowerCase().startsWith(input)
-    );
-
-    if (matchingItem) {
-      
-        localStorage.setItem("selectedItem", matchingItem.name);
-    
-        location.href = matchingItem.link;
-    } else {
-        alert("No matching results found!");
-    }
-    const selectedItem = localStorage.getItem("selectedItem");
-const selectedItem2 = localStorage.getItem("selectedItem2"); 
-const displayElement = document.getElementById("selected-item");
-const displayElement2 = document.getElementById("selected-item2");
-
-}
-
-
-        </script>
-
-
-
-
-
-
 <section class="background2" style="height:50vw">
     <section style="width:100%;background-image:url(picture\\2.jpg);margin:2vw"><h1>Medicine</h1><p>We Care About you </p></section>
     
-   
+   <!--product--> 
   <section class="product-card" onclick="select(this);window.location.href='product.html' ">
         
         <div class="badge">BEST SELLER</div>
@@ -205,10 +131,9 @@ const displayElement2 = document.getElementById("selected-item2");
    </section>
 </section>
 
+<!--device--> 
 <section class="background2" style="height:50vw;margin-top:15vw;overflow:hidden">
     <section class="container0" style=" gap:0vw;align-items: stretch;width:100%" >
-
-       
         <section class="item-intro">
             <div class="item-image">
                 <img src="picture\\pexels-i-sens-usa-578245562-17072096.jpg" alt="Item Image">
@@ -231,9 +156,6 @@ const displayElement2 = document.getElementById("selected-item2");
                 <button class="item-button" onclick=" window.location.href = 'blood.html'">Learn More</button>
             </div>
         </section>
-
-
-
         <section class="item-intro">
             <div class="item-image">
                 <img src="picture\\pexels-daliladalprat-5875565.jpg" alt="Item Image">
@@ -281,51 +203,8 @@ const displayElement2 = document.getElementById("selected-item2");
             </div>
         </section>
         </section>
+</section>       
 </section>
-       
-        
-      
-        
-       
-        
-</section>
-<script>
-    const productTitles = ["Penicillin", "Ceftriaxone", "Vitamins", "Fish Oil", "Bhruove","Penicillin", "erythromycin", "org vege oil", "ammon chlor drug"];
-    const productImages = ["picture\\m1.png", "picture\\m2.png", "picture\\m3.png", "picture\\m4.png", "picture\\m5.png","picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png","picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png"];
-    const set1=[["picture\\pexels-anna-nekrashevich-8533223-removebg-preview.png","picture\\pexels-binoid-cbd-1990665-3612182-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png","picture\\pexels-eva-bronzini-6914588-removebg-preview.png","picture\\pexels-fotios-photos-2552417-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png"],
-    ["picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-karolina-grabowska-4040566-removebg-preview.png","picture\\pexels-karolina-grabowska-4046999-removebg-preview.png","picture\\pexels-karolina-grabowska-4047146-removebg-preview.png","picture\\pexels-karolina-grabowska-4210611-removebg-preview.png","picture\\pexels-mccutcheon-3676962-removebg-preview.png"],
-    ["picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-n-voitkevich-7526022-removebg-preview.png","picture\\pexels-n-voitkevich-7615460-removebg-preview.png","picture\pexels-n-voitkevich-7615463-removebg-preview.png","picture\pexels-n-voitkevich-7615608-removebg-preview.png","picture\pexels-n-voitkevich-7852729-removebg-preview.png"]]
-  
-
-  
-    const prices = document.getElementsByClassName("product-price");
-    const titles = document.getElementsByClassName("product-title");
-    const images = document.getElementsByClassName("product-image");
-
- used=[]
-    for (let i = 0; i < prices.length; i++) {
-        const randomPrice = (Math.random() * 100).toFixed(2); 
-        let randomIndex ;
-        do {
-            randomIndex = Math.floor(Math.random() * productTitles.length);
-        } while (used.includes(randomIndex)); 
-        
-        prices[i].innerHTML = `$${randomPrice}`;
-        titles[i].innerHTML = productTitles[randomIndex];
-        images[i].src = productImages[randomIndex];
-        used.push(randomIndex)
-    }
-    function select(item){
-       
-        const itemTitle = item.querySelector("#product-title").innerText;
-        const itemprice = item.querySelector("#product-price").innerText;
-   
-        localStorage.setItem("selectedItem", itemTitle)
-        localStorage.setItem("selectedItem2", itemprice)
-    }
-</script>
-
-
 <div class="footer">
     <div class="container">
        
@@ -363,6 +242,41 @@ const displayElement2 = document.getElementById("selected-item2");
     
 </section>
 <script>
+    const productTitles = ["Penicillin", "Ceftriaxone", "Vitamins", "Fish Oil", "Bhruove","Penicillin", "erythromycin", "org vege oil", "ammon chlor drug"];
+    const productImages = ["picture\\m1.png", "picture\\m2.png", "picture\\m3.png", "picture\\m4.png", "picture\\m5.png","picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png","picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png"];
+    const set1=[["picture\\pexels-anna-nekrashevich-8533223-removebg-preview.png","picture\\pexels-binoid-cbd-1990665-3612182-removebg-preview.png","picture\\pexels-darina-belonogova-7208618-removebg-preview.png","picture\\pexels-eva-bronzini-6914588-removebg-preview.png","picture\\pexels-fotios-photos-2552417-removebg-preview.png","picture\\pexels-jonathanborba-15688022-removebg-preview.png"],
+    ["picture\\pexels-karolina-grabowska-4021813-removebg-preview.png","picture\\pexels-karolina-grabowska-4040566-removebg-preview.png","picture\\pexels-karolina-grabowska-4046999-removebg-preview.png","picture\\pexels-karolina-grabowska-4047146-removebg-preview.png","picture\\pexels-karolina-grabowska-4210611-removebg-preview.png","picture\\pexels-mccutcheon-3676962-removebg-preview.png"],
+    ["picture\\pexels-n-voitkevich-7526012-removebg-preview.png","picture\\pexels-n-voitkevich-7526022-removebg-preview.png","picture\\pexels-n-voitkevich-7615460-removebg-preview.png","picture\pexels-n-voitkevich-7615463-removebg-preview.png","picture\pexels-n-voitkevich-7615608-removebg-preview.png","picture\pexels-n-voitkevich-7852729-removebg-preview.png"]]
+  
+
+  
+    const prices = document.getElementsByClassName("product-price");
+    const titles = document.getElementsByClassName("product-title");
+    const images = document.getElementsByClassName("product-image");
+
+ used=[]
+    for (let i = 0; i < prices.length; i++) {
+        const randomPrice = (Math.random() * 100).toFixed(2); 
+        let randomIndex ;
+        do {
+            randomIndex = Math.floor(Math.random() * productTitles.length);
+        } while (used.includes(randomIndex)); 
+        
+        prices[i].innerHTML = `$${randomPrice}`;
+        titles[i].innerHTML = productTitles[randomIndex];
+        images[i].src = productImages[randomIndex];
+        used.push(randomIndex)
+    }
+    function select(item){
+       
+        const itemTitle = item.querySelector("#product-title").innerText;
+        const itemprice = item.querySelector("#product-price").innerText;
+   
+        localStorage.setItem("selectedItem", itemTitle)
+        localStorage.setItem("selectedItem2", itemprice)
+    }
+</script>
+<script>
     const first = document.querySelector(".container0");
     const pages = Array.from(first.children);
 let now = 0; 
@@ -383,5 +297,72 @@ function next(step) {
   }
 first.style.transform = `translateX(-${now * 104.2}%)`
 }
+</script>
+<script>
+    const searchData = [ { name: "Penicillin", link: "product.html" },
+    { name: "Ceftriaxone", link: "product.html" },
+    { name: "Vitamins", link: "product.html" },
+    { name: "Fish Oil", link: "product.html" },
+    { name: "Bhruove", link: "product.html" },
+    { name: "erythromycin", link: "product.html" },
+    { name: "org vege oil", link: "product.html" },
+    { name: "ammon chlor drug", link: "product.html" }
+
+];
+const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+const resultsContainer = document.getElementById("search-results");
+resultsContainer.style.display="none"
+function filterResults() {
+
+
+
+resultsContainer.innerHTML = "";
+
+
+
+const filteredResults = searchData.filter(item =>
+    item.name.toLowerCase().startsWith(input)
+);
+
+if (filteredResults.length > 0) {
+    resultsContainer.style.display = "block"; 
+    filteredResults.forEach(item => {
+        const resultElement = document.createElement("p");
+        resultElement.innerHTML = item.name;
+        resultElement.onclick = () => location.href = item.link; 
+        resultsContainer.appendChild(resultElement);
+    })
+} 
+
+
+else {
+resultsContainer.innerHTML = "none"; 
+resultsContainer.style.display= "none";
+}}
+
+
+
+function performSearch() {
+const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+const matchingItem = searchData.find(item =>
+item.name.toLowerCase().startsWith(input)
+);
+
+if (matchingItem) {
+
+localStorage.setItem("selectedItem", matchingItem.name);
+
+location.href = matchingItem.link;
+} else {
+alert("No matching results found!");
+}
+const selectedItem = localStorage.getItem("selectedItem");
+const selectedItem2 = localStorage.getItem("selectedItem2"); 
+const displayElement = document.getElementById("selected-item");
+const displayElement2 = document.getElementById("selected-item2");
+
+}
+
+
 </script>
 </body>
