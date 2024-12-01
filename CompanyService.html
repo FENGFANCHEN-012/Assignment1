@@ -6,24 +6,96 @@
     <link href="homepage.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-   <header class="header" style="height:35vw;background-image:url('picture\\4.jpg');">
-   <section class="container" style="width:100%;" >
-    <section class="item1" style="font-size:2vw"><a href="HomePage.html">HAISEN</a></section>
-    <section class="item2" style="margin-left:7vw"><a href="About Company.html">About Company</a></section>
-    <section class="item2"><a href=Innovation.html>Innovation</a></section>
-    <section class="item2"><a href=CompanyService.html>Company Service</a></section>
-    <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
-    <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+    <header class="header" style="height:35vw;background-image:url('picture\\pexels-pixabay-39866.jpg');background-size:cover">
+        <section class="container">
+            <section class="item1">HAISEN</section>
+        <section class="item2" style="margin-left:1vw"><a href="About Company.html">About Company</a></section>
+        <section class="item2"><a href=Innovation.html>Innovation</a></section>
+        <section class="item2"><a href=CompanyService.html>Company Service</a></section>
+        <section class="item2"><a href="Market strategy.html">Market Strategy</a></section>
+        <section class="item2"><a href="Social responsibility.html">Our Responsibility</a></section>
+        <div class="search-container" style="width:2vw;">
+            <input 
+                type="text" 
+                id="search-input" 
+                placeholder="Search..." 
+                oninput="filterResults()">
+               
+            <button class="search-btn" onclick="performSearch()">Search</button>
+     
+        </div>
+        </section>
+        <section id="search-results" style="width:14vw;height:5vw;overflow:scroll;position:relative;margin-left:74vw;background-color:white"></section>
+         <section class="intro" >Our Service</section>
+         
+        </header> 
+        <script>
+            const searchData = [ { name: "Penicillin", link: "product.html" },
+            { name: "Ceftriaxone", link: "product.html" },
+            { name: "Vitamins", link: "product.html" },
+            { name: "Fish Oil", link: "product.html" },
+            { name: "Bhruove", link: "product.html" },
+            { name: "erythromycin", link: "product.html" },
+            { name: "org vege oil", link: "product.html" },
+            { name: "ammon chlor drug", link: "product.html" }
+  
+];
+const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+const resultsContainer = document.getElementById("search-results");
+resultsContainer.style.display="none"
+function filterResults() {
+  
 
+  
+    resultsContainer.innerHTML = "";
+     
     
-    <section style="margin-left:5vw;margin-top:1vw"><button onclick="">Search</button></section>
-    </section>
-    <hr style="margin-top:0">
-    <section class="Ccontainer">
-        <section class="item1" style="margin-top:9vw"  >Company Service</section>
-   </header>
-   
-</section>
+      
+        const filteredResults = searchData.filter(item =>
+            item.name.toLowerCase().startsWith(input)
+        );
+
+        if (filteredResults.length > 0) {
+            resultsContainer.style.display = "block"; 
+            filteredResults.forEach(item => {
+                const resultElement = document.createElement("p");
+                resultElement.innerHTML = item.name;
+                resultElement.onclick = () => location.href = item.link; 
+                resultsContainer.appendChild(resultElement);
+            })
+        } 
+       
+    
+       else {
+        resultsContainer.innerHTML = "none"; 
+        resultsContainer.style.display= "none";
+    }}
+
+
+
+function performSearch() {
+    const input = document.getElementById("search-input").value.toLowerCase().trim(); 
+    const matchingItem = searchData.find(item =>
+        item.name.toLowerCase().startsWith(input)
+    );
+
+    if (matchingItem) {
+      
+        localStorage.setItem("selectedItem", matchingItem.name);
+    
+        location.href = matchingItem.link;
+    } else {
+        alert("No matching results found!");
+    }
+    const selectedItem = localStorage.getItem("selectedItem");
+const selectedItem2 = localStorage.getItem("selectedItem2"); 
+const displayElement = document.getElementById("selected-item");
+const displayElement2 = document.getElementById("selected-item2");
+
+}
+
+
+        </script>
 
 
 
@@ -134,15 +206,24 @@
 </section>
 
 <section class="background2" style="height:50vw;margin-top:15vw;overflow:hidden">
-    <section class="container0" style="flex-shrink:0;width:100%" >
+    <section class="container0" style=" gap:0vw;align-items: stretch;width:100%" >
 
        
         <section class="item-intro">
             <div class="item-image">
-                <img src="https://via.placeholder.com/400" alt="Item Image">
+                <img src="picture\\pexels-i-sens-usa-578245562-17072096.jpg" alt="Item Image">
             </div>
             <div class="item-details">
-                <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
+                <button class="deep-green-btn"style="margin-left: 40vw;
+    display: flex;
+    justify-content: end;
+    width:2vw;
+    line-height: normal;
+    align-items: center;
+  
+    border:none;
+    opacity:0.4
+"  onclick="next(1)">></button>
                 <h2 class="item-title">Blood Glucose Monitor</h2>
                 <p class="item-description">
                     A blood glucose monitor is a portable device that allows individuals with diabetes to monitor their blood sugar levels anytime. By taking a small blood sample from a fingertip, the device provides accurate readings in seconds. Modern glucose meters also offer data storage and analysis features, helping patients manage their diet and treatment plan to control their blood sugar and prevent complications.
@@ -155,11 +236,20 @@
 
         <section class="item-intro">
             <div class="item-image">
-                <img src="https://via.placeholder.com/400" alt="Item Image">
+                <img src="picture\\pexels-daliladalprat-5875565.jpg" alt="Item Image">
             </div>
 
             <div class="item-details">
-                <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
+                <button class="deep-green-btn"style="margin-left: 40vw;
+                display: flex;
+                justify-content: end;
+                width:2vw;
+                line-height: normal;
+                align-items: center;
+              
+                border:none;
+                opacity:0.4
+            "  onclick="next(1)">></button>
                 <h2 class="item-title">Electrocardiogram (ECG) Machine</h2>
                 <p class="item-description">
                     An Electrocardiogram (ECG) machine is a vital tool for monitoring heart health. It detects the electrical activity of the heart by placing electrodes on the skin, helping doctors diagnose heart conditions such as arrhythmias, heart attacks, and other cardiac abnormalities. Modern ECG machines offer high precision and rapid analysis, making them an essential diagnostic tool in healthcare.
@@ -170,10 +260,19 @@
 
         <section class="item-intro">
             <div class="item-image">
-                <img src="https://via.placeholder.com/400" alt="Item Image">
+                <img src="picture\\pexels-pavel-danilyuk-7108390.jpg" alt="Item Image">
             </div>
             <div class="item-details">
-                <div class="convert" style="margin-left:28vw"><button onclick="next(1)">></button></div>
+                <button class="deep-green-btn"style="margin-left: 40vw;
+                display: flex;
+                justify-content: end;
+                width:2vw;
+                line-height: normal;
+                align-items: center;
+              
+                border:none;
+                opacity:0.4
+            "  onclick="next(1)">></button>
                 <h2 class="item-title">Ultrasound Diagnostic Machine</h2>
                 <p class="item-description">
                     An ultrasound diagnostic machine uses high-frequency sound waves to non-invasively examine the internal structures of the body. It is widely used in pregnancy checks, organ scans, tumor detection, and more. Safe, with no radiation, it provides real-time images, offering doctors accurate diagnostic insights. Ultrasound has become a standard tool in hospitals worldwide.
@@ -263,4 +362,26 @@
 </div>
     
 </section>
+<script>
+    const first = document.querySelector(".container0");
+    const pages = Array.from(first.children);
+let now = 0; 
+
+const time = 0;
+
+
+function next(step) {
+
+
+  now += step; 
+
+
+  if (now >= pages.length) {
+    now = 0; 
+  } else if (now < 0) {
+    now = pages.length - 1; 
+  }
+first.style.transform = `translateX(-${now * 104.2}%)`
+}
+</script>
 </body>

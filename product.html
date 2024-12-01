@@ -227,7 +227,7 @@
                     <h5 style="height:1vw;">Your weight (kg):    <input type="number"  name="kg"  max="100"  required style="height:1vw;margin-top:0;width:5vw";></h5>
                     <h5 style="height:1vw">Your Sex:   <label>Male</label><input type="radio"  name="sex"  required style="height:1vw;margin-top:0";><label>Female</label><input type="radio"  name="sex"  required style="height:1vw;margin-top:0";></h5>
                  
-                    <button type="submit"class="deep-green-btn" id="sub" >Check result</button>
+                    <button class="deep-green-btn" id="sub"  >Check result</button>
                     </section>
                     </form>
                     
@@ -358,21 +358,21 @@
             <h2>Our Promise</h2>
             <div class="promise-list">
                 <div class="promise-item">
-                    <img src="https://via.placeholder.com/150" alt="Exceptional Quality">
+                    <img src="picture\\pexels-pixabay-260024.jpg" alt="Exceptional Quality">
                     <div class="promise-content">
                         <h3>Exceptional Quality</h3>
                         <p>We ensure every product meets the highest standards of quality and craftsmanship, giving you the best possible experience.</p>
                     </div>
                 </div>
                 <div class="promise-item">
-                    <img src="https://via.placeholder.com/150" alt="Sustainability">
+                    <img src="picture\\pexels-binoid-cbd-1990665-3612182-removebg-preview.png" alt="Sustainability">
                     <div class="promise-content">
                         <h3>Sustainability</h3>
                         <p>We are committed to sustainable practices, ensuring minimal environmental impact while maximizing societal benefits.</p>
                     </div>
                 </div>
                 <div class="promise-item">
-                    <img src="https://via.placeholder.com/150" alt="Trusted Support">
+                    <img src=" picture\\pexels-mikhail-nilov-7682200.jpg"alt="Trusted Support">
                     <div class="promise-content">
                         <h3>Trusted Support</h3>
                         <p>Our team of professionals is always available to provide expert guidance and support, ensuring customer satisfaction.</p>
@@ -394,9 +394,7 @@
 
    
         <div class="doctor-advice" style="margin-top:4vw">
-            <div class="doctor-image">
-                <img src="https://via.placeholder.com/150" alt="Doctor's Photo">
-            </div>
+                
             <div class="advice-content">
                 <div>
                     <h2>Your Daily serving size should be:</h3>
@@ -425,8 +423,9 @@ event.preventDefault();
 const age = form.elements['age'].value;
 const weight = form.elements['kg'].value;
 const sexInputs = form.elements['sex'].value;
-if (!age || !weight || !sex) {
+if (!age || !weight || !sexInputs) {
     alert("Please fill out all fields.");
+    return;
     
 }
 else{
